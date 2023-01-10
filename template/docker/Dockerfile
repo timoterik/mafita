@@ -4,15 +4,15 @@ COPY local local
 
 LABEL version="@version@"
 
-WORKDIR /local/@projectName@
+WORKDIR /local/mafita_webapp
 
 ENTRYPOINT [\
     "java",\
     "-Duser.timezone=UTC",\
     "-jar",\
-    "/local/@projectName@/lib/@projectName@-@version@-all.jar",\
+    "/local/mafita_webapp/lib/mafita_webapp-@version@-all.jar",\
     "--settings",\
-    "/local/@projectName@/etc/stack.server-docker.yaml"\
+    "/local/mafita_webapp/etc/stack.server-docker.yaml"\
 ]
 
 EXPOSE 8080

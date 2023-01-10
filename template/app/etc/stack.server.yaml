@@ -2,17 +2,17 @@ serverName: Zakadabar Demo
 defaultLocale: en
 
 database:
-  driverClassName: @sqlDriver@
-  jdbcUrl: @sqlUrl@
-  username: @sqlUser@
-  password: @sqlPassword@
+  driverClassName: org.h2.Driver
+  jdbcUrl: jdbc:h2:./app/var/mafita_webapp
+  username: local
+  password: a91af9d5-5a16-4b8f-83c3-ae8420dd129f
   debugSql: false
 
 traceRouting: false
 staticResources: ./var/static
 
 modules:
-  - @packageName@.backend.Module
+  - io.dcctech.mafita.backend.Module
 
 #ktor:
 #  port: 8080

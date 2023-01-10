@@ -1,5 +1,5 @@
 /*
- * @copyright@
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 @file:Suppress("unused") // main is called by webpack
 
@@ -7,10 +7,10 @@ import zakadabar.core.browser.application.ZkApplication
 import zakadabar.core.browser.application.application
 import zakadabar.core.browser.util.io
 import zakadabar.core.resource.initTheme
-import zakadabar.template.frontend.browser.Routing
-import zakadabar.template.frontend.browser.resources.AppDarkTheme
-import zakadabar.template.frontend.browser.resources.AppLightTheme
-import zakadabar.template.resources.strings
+import io.dcctech.mafita.frontend.browser.Routing
+import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
+import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
+import io.dcctech.mafita.resources.strings
 
 fun main() {
 

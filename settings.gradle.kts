@@ -1,1 +1,1 @@
-rootProject.name = "zakadabar-application-template"
+rootProject.name = "mafita_webapp"
