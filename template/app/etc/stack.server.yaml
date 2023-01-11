@@ -1,11 +1,11 @@
-serverName: Zakadabar Demo
+serverName: Mafita
 defaultLocale: en
 
 database:
-  driverClassName: org.h2.Driver
-  jdbcUrl: jdbc:h2:./app/var/mafita_webapp
-  username: local
-  password: a91af9d5-5a16-4b8f-83c3-ae8420dd129f
+  driverClassName: org.postgresql.Driver
+  jdbcUrl: jdbc:postgresql://localhost:5432/Mafita
+  username: ted
+  password: Almafa.12
   debugSql: false
 
 traceRouting: false
