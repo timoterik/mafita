@@ -25,6 +25,7 @@ class ExampleEntityBo(
     override var id: EntityId<ExampleEntityBo>,
     var name: String
 
+
 ) : EntityBo<ExampleEntityBo> {
 
     companion object : EntityBoCompanion<ExampleEntityBo>("example-entity")
