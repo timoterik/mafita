@@ -1,8 +1,10 @@
 /*
- * Copyright © 2020-2021, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 package io.dcctech.mafita.frontend.browser.components
 
+import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
+import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
 import zakadabar.core.browser.application.application
 import zakadabar.core.browser.theme.ZkThemeRotate
 import zakadabar.core.browser.util.marginRight
@@ -11,8 +13,6 @@ import zakadabar.core.resource.css.AlignSelf
 import zakadabar.core.resource.css.Display
 import zakadabar.core.resource.css.px
 import zakadabar.softui.browser.titlebar.SuiAppHeader
-import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
-import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
 
 class AppHeader(
     onToggleSideBar: () -> Unit = { },

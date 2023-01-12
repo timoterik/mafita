@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 @file:Suppress("unused") // auto binding makes this inspection useless
 
@@ -28,4 +28,8 @@ class AppStrings : ZkBuiltinStrings() {
     override val lastLoginFail by "Last Login Fail"
     val description by "Description"
     override val loginFailCount by "Login Fail Count"
+    val MembershipAccountBo by "MembershipAccountBo"
+    val DocumentBo by "DocumentBo"
+
+
 }
