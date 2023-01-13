@@ -2,9 +2,9 @@
  * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 
+import zakadabar.gradle.config
 import zakadabar.gradle.isPublishing
 import zakadabar.gradle.manifestAndDokka
-import zakadabar.gradle.config
 import java.util.*
 
 plugins {
@@ -27,7 +27,7 @@ version = "2023.1.10"
 
 val isSnapshot = version.toString().contains("SNAPSHOT")
 
-val stackVersion by extra { "2022.6.20" }
+val stackVersion by extra { "2023.1.9" }
 val datetimeVersion = "0.2.1"
 
 // in TeamCity we can use the build number to find the generated docker image

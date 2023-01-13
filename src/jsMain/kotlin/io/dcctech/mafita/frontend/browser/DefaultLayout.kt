@@ -3,8 +3,8 @@
  */
 package io.dcctech.mafita.frontend.browser
 
-import zakadabar.softui.browser.layout.SuiDefaultLayout
 import io.dcctech.mafita.frontend.browser.components.AppHeader
+import zakadabar.softui.browser.layout.SuiDefaultLayout
 
 object DefaultLayout : SuiDefaultLayout() {
     override fun onCreate() {
