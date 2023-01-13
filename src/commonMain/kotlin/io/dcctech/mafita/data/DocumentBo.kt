@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 package io.dcctech.mafita.data
 
@@ -15,6 +15,7 @@ import zakadabar.core.schema.BoSchema
 class DocumentBo(
 
     override var id: EntityId<DocumentBo>,
+    var name: String,
     var type: DocumentType,
     var createAt: Instant
 
@@ -27,6 +28,7 @@ class DocumentBo(
 
     override fun schema() = BoSchema {
         + ::id
+        + ::name min 3 max 60
         + ::type
         + ::createAt
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 package io.dcctech.mafita.backend.persistence
 
@@ -21,11 +21,13 @@ open class DocumentPa(
 ) {
     override fun ResultRow.toBo() = DocumentBo(
         id = this[table.id].entityId(),
+        name = this[table.name],
         type = this[table.type],
         createAt = this[table.createAt].toKotlinInstant()
     )
 
     override fun UpdateBuilder<*>.fromBo(bo: DocumentBo) {
+        this[table.name] = bo.name
         this[table.type] = bo.type
         this[table.createAt] = bo.createAt.toJavaInstant()
     }
@@ -34,12 +36,13 @@ open class DocumentPa(
 object DocumentTableDefault : DocumentTable()
 
 open class DocumentTable(
-    tableName: String = "documents"
+    tableName: String = "document"
 ) : ExposedPaTable<DocumentBo>(
     tableName = tableName
 ) {
 
-    val type = enumerationByName("type", 10, DocumentType::class)
+    val name = varchar("name", length = 60)
+    val type = enumerationByName("type", 15, DocumentType::class)
     val createAt = timestamp("create_at")
 
 }

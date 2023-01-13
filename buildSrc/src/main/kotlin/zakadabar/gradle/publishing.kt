@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 package zakadabar.gradle
 
@@ -110,15 +110,6 @@ fun MavenPublication.config(source: Any, pomName: String) {
                 distribution.set("repo")
             }
         }
-//        developers {
-//            developer {
-//                id.set("toth-istvan-zoltan")
-//                name.set("Tóth István Zoltán")
-//                url.set("https://github.com/toth-istvan-zoltan")
-//                organization.set("@organization@")
-//                organizationUrl.set("@organizationUrl@")
-//            }
-//        }
     }
 
 }
