@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 @file:Suppress("unused") // auto binding makes this inspection useless
 
@@ -29,6 +29,17 @@ class AppStrings : ZkBuiltinStrings() {
     val description by "Description"
     override val loginFailCount by "Login Fail Count"
     val DocumentBo by "DocumentBo"
+    val documents by "Documents"
+    val document by "Document"
+    val slogen by "Experiences of a lifetime"
+    val about by "About"
+    val fridayClub by "Friday club"
+    val cruSzeged by "Cru Szeged"
+    val camp by "Camp"
+    val communityService by "Community service"
+    val donation by "Donation"
+    val contributors by "Contributors"
+    val contact by "Contact"
 
 
 }
