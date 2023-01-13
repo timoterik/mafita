@@ -28,7 +28,6 @@ class AppStrings : ZkBuiltinStrings() {
     override val lastLoginFail by "Last Login Fail"
     val description by "Description"
     override val loginFailCount by "Login Fail Count"
-    val MembershipAccountBo by "MembershipAccountBo"
     val DocumentBo by "DocumentBo"
 
 

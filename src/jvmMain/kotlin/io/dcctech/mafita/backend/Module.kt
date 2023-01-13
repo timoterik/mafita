@@ -6,7 +6,6 @@ package io.dcctech.mafita.backend
 
 import io.dcctech.mafita.backend.business.DocumentBl
 import io.dcctech.mafita.backend.business.DocumentBlobBl
-import io.dcctech.mafita.backend.business.MembershipAccountBl
 import io.ktor.http.content.*
 import io.ktor.routing.*
 import zakadabar.core.authorize.AppRolesBase
@@ -30,11 +29,10 @@ object Module : RoutedModule {
 
         modules += SimpleRoleAuthorizerProvider {
             all = LOGGED_IN
-            delete = MyRoles.siteMembershipAccount
+            delete = MyRoles.siteUser
         }
 
 
-        modules += MembershipAccountBl()
         modules += DocumentBl()
         modules += DocumentBlobBl()
     }
@@ -43,6 +41,6 @@ object Module : RoutedModule {
 
 object MyRoles : AppRolesBase() {
     val contributor by "contributor"
-    val siteMembershipAccount by "site-member"
+    val siteUser by "site-member"
     val student by "student"
 }

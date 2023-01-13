@@ -5,7 +5,6 @@ package io.dcctech.mafita.frontend.browser
 
 
 import io.dcctech.mafita.frontend.browser.pages.DocumentCrud
-import io.dcctech.mafita.frontend.browser.pages.MembershipAccountCrud
 import io.dcctech.mafita.resources.strings
 import kotlinx.browser.window
 import zakadabar.core.authorize.appRoles
@@ -29,12 +28,6 @@ class SideBar : ZkSideBar() {
             + item<Login>()
         }
 
-        ifNotAnonymous {
-            + item<MembershipAccountCrud>()
-            + item<DocumentCrud>()
-
-        }
-
         withRole(appRoles.securityOfficer) {
             + group(localized<AccountSecure>()) {
                 + item<AccountSecure>()
@@ -48,6 +41,7 @@ class SideBar : ZkSideBar() {
 
         ifNotAnonymous {
             + item<Account>()
+            + item<DocumentCrud>()
             + item(strings.logout) {
                 io {
                     LogoutAction().execute()
