@@ -1,10 +1,11 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 package io.dcctech.mafita.frontend.browser
 
 import io.dcctech.mafita.frontend.browser.pages.DocumentCrud
 import io.dcctech.mafita.frontend.browser.pages.Home
+import io.dcctech.mafita.frontend.browser.pages.MailCrud
 import zakadabar.core.browser.application.ZkAppRouting
 
 class Routing : ZkAppRouting(DefaultLayout, Home) {
@@ -14,6 +15,7 @@ class Routing : ZkAppRouting(DefaultLayout, Home) {
         zakadabar.lib.i18n.browser.install(this)
         + Home
         + DocumentCrud()
+        + MailCrud()
 
     }
 
