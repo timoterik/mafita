@@ -3,14 +3,14 @@
  */
 @file:Suppress("unused") // main is called by webpack
 
-import zakadabar.core.browser.application.ZkApplication
-import zakadabar.core.browser.application.application
-import zakadabar.core.browser.util.io
-import zakadabar.core.resource.initTheme
 import io.dcctech.mafita.frontend.browser.Routing
 import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
 import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
 import io.dcctech.mafita.resources.strings
+import zakadabar.core.browser.application.ZkApplication
+import zakadabar.core.browser.application.application
+import zakadabar.core.browser.util.io
+import zakadabar.core.resource.initTheme
 
 fun main() {
 
