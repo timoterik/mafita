@@ -17,8 +17,7 @@ class AppDarkTheme : SuiDarkTheme() {
     // Customize theme variables
     // -------------------------------------------------------------------------
 
-//    override var primaryColor = "green"
-
+    override var primaryColor = "#DF6107"
     // -------------------------------------------------------------------------
     // Customize style variables
     // -------------------------------------------------------------------------

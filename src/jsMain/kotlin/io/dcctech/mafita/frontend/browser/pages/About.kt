@@ -4,29 +4,18 @@
 package io.dcctech.mafita.frontend.browser.pages
 
 
-
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.layout.ZkFullScreenLayout
 import zakadabar.core.browser.page.ZkPathPage
-import zakadabar.core.resource.ZkColors
-import zakadabar.core.resource.css.AlignItems
-import zakadabar.core.resource.css.vh
 import zakadabar.core.resource.css.vw
 import zakadabar.lib.blobs.browser.blobStyles
 
-object Welcome : ZkPathPage(ZkFullScreenLayout) {
+object About : ZkPathPage(ZkFullScreenLayout) {
 
     override fun onCreate() {
 
-        + column {
-            + AlignItems.center
-            height = 30.vh
-
-
-        }
         setAppTitle = false
-        height = 90.vw
-        this.style { background = ZkColors.white }
+        height = 40.vw
 
         + row {
             + gridAutoColumns
