@@ -13,6 +13,7 @@ class AppStyles : ZkCssStyleSheet() {
     // CSS styles the application
     // -------------------------------------------------------------------------
 
+
     val home by cssClass {
         overflowY = "scroll"
         padding = 20.px
@@ -27,18 +28,26 @@ class AppStyles : ZkCssStyleSheet() {
         padding = theme.spacingStep.px
     }
 
-    val navCol by cssClass {
+    val nav by cssClass {
+        + Display.grid
+        gridTemplateColumns = "repeat(12, max-content)"
+        gridAutoRows = 8.vh
+        gridGap = 10.px
         + JustifyContent.center
-        + AlignItems.center
-        width = "8%"
+        + AlignItems.baseLine
+        + Position.fixed
+        top = "0"
+        width = "100%"
+        backgroundImage = "url(/wave_${theme.secondaryColor}.svg)"
     }
+
+//  TODO would look more natural this way
 
 //    val wave by cssClass {
 //     + Position.relative
 //        height = 70.px
 //        width + 600.px
 //        background = "#e0efe3"
-//
 //        on(":before") {
 //            content = ""
 //            + Display.block
@@ -49,7 +58,6 @@ class AppStyles : ZkCssStyleSheet() {
 //            backgroundColor = ZkColors.white
 //            right = (- 5).px
 //            top = 40.px
-//
 //        }
 //
 //        on(":after") {

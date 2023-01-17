@@ -10,9 +10,7 @@ import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.ZkElement
 import zakadabar.core.browser.theme.ZkThemeRotate
 import zakadabar.core.browser.toast.toastSuccess
-import zakadabar.core.resource.ZkColors
 import zakadabar.core.resource.ZkIcons
-import zakadabar.core.resource.css.vh
 import zakadabar.lib.accounts.browser.login.Login
 
 class MafitaHeader : ZkElement() {
@@ -34,24 +32,14 @@ class MafitaHeader : ZkElement() {
     override fun onCreate() {
         super.onCreate()
 
-        + row {
-
-            style {
-                height = 10.vh
-                background = ZkColors.Yellow.a400
-            }
-
-
+        + zke {
+            + appStyles.nav
             navBtnArray.forEach {
-                + column {
-                    + appStyles.navCol
+                + zke {
                     + it
                 }
             }
-
-            + column {
-                + appStyles.navCol
-
+            + zke {
                 + ZkThemeRotate(
                     ZkIcons.darkMode to AppDarkTheme(),
                     ZkIcons.lightMode to AppLightTheme()
@@ -59,5 +47,4 @@ class MafitaHeader : ZkElement() {
             }
         }
     }
-
 }
