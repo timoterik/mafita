@@ -41,6 +41,11 @@ class AppStyles : ZkCssStyleSheet() {
         backgroundImage = "url(/wave_${theme.secondaryColor}.svg)"
     }
 
+    val homePageStyleOne by cssClass {
+        backgroundColor = mafitaTheme.homepageBgColorOne
+        color = mafitaTheme.homepageTextColorOne
+    }
+
 //  TODO would look more natural this way
 
 //    val wave by cssClass {

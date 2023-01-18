@@ -10,7 +10,8 @@ import zakadabar.core.resource.ZkColors
 import zakadabar.core.util.alpha
 import zakadabar.softui.browser.theme.SuiLightTheme
 
-class AppLightTheme : SuiLightTheme() {
+
+class AppLightTheme : SuiLightTheme(), MafitaTheme {
 
     companion object {
         const val NAME = "app-light"
@@ -23,16 +24,17 @@ class AppLightTheme : SuiLightTheme() {
     // -------------------------------------------------------------------------
 
     override var primaryColor = "#DF6107"
-    var homepageBgColorOne = ZkColors.white
-    var homepageBgColorTwo = ZkColors.black
-    var homepageTextColorOne = ZkColors.black
-    var homepageTextColorTwo = ZkColors.white
+
+    override var homepageBgColorOne = ZkColors.white
+    override var homepageBgColorTwo = ZkColors.black
+    override var homepageTextColorOne = ZkColors.black
+    override var homepageTextColorTwo = ZkColors.white
 
     override var secondaryColor = "white"
 
 
     override fun onResume() {
-        super.onResume()
+        super<SuiLightTheme>.onResume()
 
         with(zkScrollBarStyles) {
             thumbColor = textColor.alpha(0.5)
