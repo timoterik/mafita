@@ -46,6 +46,20 @@ class AppStyles : ZkCssStyleSheet() {
         color = mafitaTheme.homepageTextColorOne
     }
 
+    val homePageStyleTwo by cssClass {
+        backgroundColor = mafitaTheme.homepageBgColorTwo
+        color = mafitaTheme.homepageTextColorTwo
+    }
+
+    val welcomePage by cssClass {
+//        paddingTop = 5.vh
+    }
+
+    val welcomePageLogo by cssClass {
+        + JustifyContent.center
+        + AlignItems.center
+        color = theme.primaryColor
+    }
 //  TODO would look more natural this way
 
 //    val wave by cssClass {

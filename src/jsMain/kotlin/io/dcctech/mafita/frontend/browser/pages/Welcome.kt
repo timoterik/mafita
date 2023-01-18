@@ -4,11 +4,11 @@
 package io.dcctech.mafita.frontend.browser.pages
 
 
-
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.layout.ZkFullScreenLayout
 import zakadabar.core.browser.page.ZkPathPage
+import zakadabar.core.resource.css.vh
 import zakadabar.lib.blobs.browser.blobStyles
 
 object Welcome : ZkPathPage(ZkFullScreenLayout) {
@@ -16,17 +16,23 @@ object Welcome : ZkPathPage(ZkFullScreenLayout) {
     override fun onCreate() {
 
         setAppTitle = false
-        appStyles.homePageStyleOne
+        + appStyles.homePageStyleOne
 
         + row {
-            + gridAutoColumns
+            + appStyles.welcomePage
             + column {
                 + image("/welcomePicture.png", blobStyles.image)
             }
 
             + column {
-                + strings.slogen
-                + image("/favicon.png", blobStyles.image)
+                + appStyles.welcomePageLogo
+                + row {
+                    height = 10.vh
+                    + zke { + strings.slogen }
+                }
+                + row {
+                    + image("/favicon.png", blobStyles.image)
+                }
             }
         }
     }
