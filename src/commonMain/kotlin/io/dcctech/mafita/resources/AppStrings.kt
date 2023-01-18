@@ -31,8 +31,10 @@ class AppStrings : ZkBuiltinStrings() {
     val DocumentBo by "DocumentBo"
     val documents by "Documents"
     val document by "Document"
-    val slogen by "Experiences of a lifetime"
+    val slogan by "Experiences of a lifetime"
     val about by "About"
+    val aboutText by """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo consequat velit sed porta. Mauris sollicitudin est ante, non laoreet odio elementum ut. Proin tincidunt metus vitae egestas auctor. Praesent efficitur turpis at elementum fermentum. Donec id viverra purus. Ut lacinia semper dui iaculis finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur id tempus dui. Nullam risus metus, tempor nec orci et, interdum viverra tortor. Vivamus libero augue, ultrices at ligula sit amet, elementum convallis ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n" +
+            "Aliquam odio odio, aliquet eu orci non, faucibus malesuada enim. Nullam at quam erat. Maecenas tincidunt efficitur ultricies. Cras erat est, viverra vel ex a, mollis posuere nulla. Etiam laoreet id mi ut ornare. Donec non nunc eleifend, convallis tortor in, pharetra ligula. Sed iaculis faucibus dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut blandit ut neque et tincidunt."""
     val fridayClub by "Friday club"
     val cruSzeged by "Cru Szeged"
     val camp by "Camp"

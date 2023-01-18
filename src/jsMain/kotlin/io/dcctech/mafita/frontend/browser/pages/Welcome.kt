@@ -19,7 +19,6 @@ object Welcome : ZkPathPage(ZkFullScreenLayout) {
         + appStyles.homePageStyleOne
 
         + row {
-            + appStyles.welcomePage
             + column {
                 + image("/welcomePicture.png", blobStyles.image)
             }
@@ -28,7 +27,7 @@ object Welcome : ZkPathPage(ZkFullScreenLayout) {
                 + appStyles.welcomePageLogo
                 + row {
                     height = 10.vh
-                    + zke { + strings.slogen }
+                    + zke { + strings.slogan }
                 }
                 + row {
                     + image("/favicon.png", blobStyles.image)

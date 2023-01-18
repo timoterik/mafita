@@ -51,8 +51,21 @@ class AppStyles : ZkCssStyleSheet() {
         color = mafitaTheme.homepageTextColorTwo
     }
 
-    val welcomePage by cssClass {
-//        paddingTop = 5.vh
+    val aboutPageTitleText by cssClass {
+        + Position.absolute
+        top = 6.vh
+        left = 10.vh
+        fontSize = 3.vh
+
+    }
+
+    val aboutPageText by cssClass {
+        + Position.absolute
+        width = 40.vh
+        top = 15.vh
+        left = 1.vh
+        fontSize = 1.5.vh
+        textAlign = "left"
     }
 
     val welcomePageLogo by cssClass {
