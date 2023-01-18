@@ -3,11 +3,11 @@
  */
 package io.dcctech.mafita.frontend.browser.components
 
+import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
+import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
 import zakadabar.core.browser.ZkElement
 import zakadabar.core.browser.theme.ZkThemeRotate
 import zakadabar.core.resource.ZkIcons
-import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
-import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
 
 class HeaderActions : ZkElement() {
 

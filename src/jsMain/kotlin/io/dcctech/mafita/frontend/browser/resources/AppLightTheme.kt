@@ -3,9 +3,15 @@
  */
 package io.dcctech.mafita.frontend.browser.resources
 
+import zakadabar.core.browser.layout.zkScrollBarStyles
+import zakadabar.core.browser.sidebar.zkSideBarStyles
+import zakadabar.core.browser.titlebar.zkTitleBarStyles
+import zakadabar.core.resource.ZkColors
+import zakadabar.core.util.alpha
 import zakadabar.softui.browser.theme.SuiLightTheme
 
-class AppLightTheme : SuiLightTheme() {
+
+class AppLightTheme : SuiLightTheme(), MafitaTheme {
 
     companion object {
         const val NAME = "app-light"
@@ -17,18 +23,41 @@ class AppLightTheme : SuiLightTheme() {
     // Customize theme variables
     // -------------------------------------------------------------------------
 
-//    override var primaryColor = "green"
+    override var primaryColor = "#DF6107"
 
-    // -------------------------------------------------------------------------
-    // Customize style variables
-    // -------------------------------------------------------------------------
+    override var homepageBgColorOne = ZkColors.white
+    override var homepageBgColorTwo = ZkColors.black
+    override var homepageTextColorOne = ZkColors.black
+    override var homepageTextColorTwo = ZkColors.white
 
-//    override fun onResume() {
-//        super.onResume()
-//
-//        with(zkTitleBarStyles) {
-//            appHandleBackground = "green"
-//        }
-//    }
+    override var secondaryColor = "white"
 
+
+    override fun onResume() {
+        super<SuiLightTheme>.onResume()
+
+        with(zkScrollBarStyles) {
+            thumbColor = textColor.alpha(0.5)
+            trackColor = backgroundColor
+        }
+
+        with(zkSideBarStyles) {
+            backgroundColor = primaryColor
+            hoverTextColor = ZkColors.white
+            textColor = primaryColor
+            fontSize = "90%"
+            sectionBackgroundColor = ZkColors.white.alpha(0.1)
+            sectionBorderColor = ZkColors.white.alpha(0.5)
+            sectionTextColor = ZkColors.white
+        }
+
+        with(zkTitleBarStyles) {
+            appHandleBackground = blockBackgroundColor
+            appHandleText = textColor
+            appHandleBorder = "1px solid $primaryColor"
+            appTitleBarBackground = blockBackgroundColor
+            appTitleBarBorder = appHandleBorder
+        }
+
+    }
 }

@@ -3,16 +3,16 @@
  */
 package io.dcctech.mafita.frontend.browser.pages
 
+import io.dcctech.mafita.frontend.browser.components.MafitaHeader
+import zakadabar.core.browser.layout.ZkFullScreenLayout
 import zakadabar.core.browser.page.ZkPage
-import zakadabar.core.browser.util.plusAssign
-import io.dcctech.mafita.frontend.browser.resources.appStyles
 
-object Home : ZkPage() {
+object Home : ZkPage(ZkFullScreenLayout) {
 
     override fun onCreate() {
-        classList += appStyles.home
-
-        + "This is the home page of your application. Click on \"Login\" (on the left) and use \"so\" - \"so\" to log in."
+        super.onCreate()
+        + MafitaHeader()
+        + Welcome
+        + About
     }
-
 }

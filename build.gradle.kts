@@ -74,6 +74,9 @@ kotlin {
         implementation("hu.simplexion.zakadabar:blobs:$stackVersion")
         implementation("hu.simplexion.zakadabar:i18n:$stackVersion")
         implementation("hu.simplexion.zakadabar:softui:$stackVersion")
+        implementation("hu.simplexion.zakadabar:schedule:$stackVersion")
+        implementation("hu.simplexion.zakadabar:email:$stackVersion")
+
     }
 
     sourceSets["jvmMain"].dependencies {

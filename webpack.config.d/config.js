@@ -1,5 +1,5 @@
 /*
- * @copyright@
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 // this file contains additions to the default Kotlin MPP webpack config
 // you may see the resulting configuration in build/reports/webpack

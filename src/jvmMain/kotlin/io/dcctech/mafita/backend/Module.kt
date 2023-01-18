@@ -1,7 +1,6 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
-
 package io.dcctech.mafita.backend
 
 import io.dcctech.mafita.backend.business.DocumentBl
@@ -13,6 +12,7 @@ import zakadabar.core.authorize.SimpleRoleAuthorizerProvider
 import zakadabar.core.module.modules
 import zakadabar.core.route.RoutedModule
 import zakadabar.core.util.PublicApi
+import zakadabar.lib.schedule.business.WorkerBl
 
 @PublicApi
 object Module : RoutedModule {
@@ -32,6 +32,11 @@ object Module : RoutedModule {
             delete = MyRoles.siteUser
         }
 
+
+        zakadabar.lib.schedule.install()
+        modules += WorkerBl("worker1")
+
+        zakadabar.lib.email.install()
 
         modules += DocumentBl()
         modules += DocumentBlobBl()

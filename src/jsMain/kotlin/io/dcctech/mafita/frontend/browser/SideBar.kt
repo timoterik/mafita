@@ -1,10 +1,11 @@
 /*
- * Copyright © 2020, Simplexion, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
+ * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 package io.dcctech.mafita.frontend.browser
 
 
 import io.dcctech.mafita.frontend.browser.pages.DocumentCrud
+import io.dcctech.mafita.frontend.browser.pages.MailCrud
 import io.dcctech.mafita.resources.strings
 import kotlinx.browser.window
 import zakadabar.core.authorize.appRoles
@@ -28,20 +29,20 @@ class SideBar : ZkSideBar() {
             + item<Login>()
         }
 
-        withRole(appRoles.securityOfficer) {
-            + group(localized<AccountSecure>()) {
-                + item<AccountSecure>()
-                + item<Roles>()
-            }
-            + group(localized<TranslationCrud>()) {
-                + item<LocaleCrud>()
-                + item<TranslationCrud>()
-            }
-        }
-
         ifNotAnonymous {
             + item<Account>()
             + item<DocumentCrud>()
+            withRole(appRoles.securityOfficer) {
+                + group(localized<AccountSecure>()) {
+                    + item<AccountSecure>()
+                    + item<Roles>()
+                    + item<MailCrud>()
+                }
+                + group(localized<TranslationCrud>()) {
+                    + item<LocaleCrud>()
+                    + item<TranslationCrud>()
+                }
+            }
             + item(strings.logout) {
                 io {
                     LogoutAction().execute()
