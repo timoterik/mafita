@@ -5,9 +5,10 @@ package io.dcctech.mafita.frontend.browser.pages
 
 import io.dcctech.mafita.frontend.browser.components.MafitaHeader
 import zakadabar.core.browser.layout.ZkFullScreenLayout
+import zakadabar.core.browser.layout.zkDefaultLayoutStyles
 import zakadabar.core.browser.page.ZkPage
 
-object Home : ZkPage(ZkFullScreenLayout) {
+object Home : ZkPage(ZkFullScreenLayout, zkDefaultLayoutStyles.popupSideBarContainer) {
 
     override fun onCreate() {
         super.onCreate()

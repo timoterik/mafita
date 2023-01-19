@@ -3,6 +3,7 @@
  */
 package io.dcctech.mafita.frontend.browser.resources
 
+import zakadabar.core.browser.layout.zkScrollBarStyles
 import zakadabar.core.resource.css.*
 
 val appStyles by cssStyleSheet(AppStyles())
@@ -31,8 +32,7 @@ class AppStyles : ZkCssStyleSheet() {
     val nav by cssClass {
         + Display.grid
         gridTemplateColumns = "repeat(12, max-content)"
-        gridAutoRows = 8.vh
-        gridGap = 10.px
+        gridAutoRows = 8.vw
         + JustifyContent.center
         + AlignItems.baseLine
         + Position.fixed
@@ -42,6 +42,7 @@ class AppStyles : ZkCssStyleSheet() {
     }
 
     val homePageStyleOne by cssClass {
+        zkScrollBarStyles.enabled = false
         backgroundColor = mafitaTheme.homepageBgColorOne
         color = mafitaTheme.homepageTextColorOne
     }
@@ -53,19 +54,20 @@ class AppStyles : ZkCssStyleSheet() {
 
     val aboutPageTitleText by cssClass {
         + Position.absolute
-        top = 6.vh
-        left = 10.vh
-        fontSize = 3.vh
+        top = 9.vw
+        left = 3.vw
+        fontSize = 2.vw
+        color = mafitaTheme.homepageTextColorTwo
 
     }
 
     val aboutPageText by cssClass {
         + Position.absolute
-        width = 40.vh
-        top = 15.vh
-        left = 1.vh
-        fontSize = 1.5.vh
-        textAlign = "left"
+        width = 40.vw
+        top = 15.vw
+        left = 3.vw
+        fontSize = 1.3.vw
+        color = mafitaTheme.homepageTextColorTwo
     }
 
     val welcomePageLogo by cssClass {

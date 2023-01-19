@@ -20,9 +20,9 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
 
     override var primaryColor = "#DF6107"
     override var homepageBgColorOne = ZkColors.black
-    override var homepageBgColorTwo = ZkColors.white
-    override var homepageTextColorOne = ZkColors.white
-    override var homepageTextColorTwo = ZkColors.black
+    override var homepageBgColorTwo = ZkColors.BlueGray.c300
+    override var homepageTextColorOne = ZkColors.Gray.c50
+    override var homepageTextColorTwo = ZkColors.BlueGray.c400
     override var secondaryColor = "black"
 
     override fun onResume() {

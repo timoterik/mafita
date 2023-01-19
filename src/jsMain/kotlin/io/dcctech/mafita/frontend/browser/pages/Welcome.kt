@@ -7,15 +7,17 @@ package io.dcctech.mafita.frontend.browser.pages
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.layout.ZkFullScreenLayout
-import zakadabar.core.browser.page.ZkPathPage
+import zakadabar.core.browser.layout.zkScrollBarStyles
+import zakadabar.core.browser.page.ZkPage
 import zakadabar.core.resource.css.vh
 import zakadabar.lib.blobs.browser.blobStyles
 
-object Welcome : ZkPathPage(ZkFullScreenLayout) {
+object Welcome : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar) {
 
     override fun onCreate() {
 
         setAppTitle = false
+
         + appStyles.homePageStyleOne
 
         + row {

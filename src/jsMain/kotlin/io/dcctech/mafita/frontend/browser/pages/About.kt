@@ -7,11 +7,12 @@ package io.dcctech.mafita.frontend.browser.pages
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.layout.ZkFullScreenLayout
-import zakadabar.core.browser.page.ZkPathPage
+import zakadabar.core.browser.layout.zkScrollBarStyles
+import zakadabar.core.browser.page.ZkPage
 import zakadabar.core.resource.css.Position
 import zakadabar.lib.blobs.browser.blobStyles
 
-object About : ZkPathPage(ZkFullScreenLayout) {
+object About : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar) {
 
     override fun onCreate() {
 
@@ -20,7 +21,7 @@ object About : ZkPathPage(ZkFullScreenLayout) {
 
         + row {
             + grid {
-                width = "130%"
+                width = "200%" //Todo it looks very ugly
                 + Position.relative
                 + image("/about_1.png", blobStyles.image)
                 + h4 {
