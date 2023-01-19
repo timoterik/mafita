@@ -3,7 +3,13 @@
  */
 package io.dcctech.mafita.frontend.browser
 
-import io.dcctech.mafita.frontend.browser.pages.*
+import io.dcctech.mafita.frontend.browser.pages.Dashboard
+import io.dcctech.mafita.frontend.browser.pages.DocumentCrud
+import io.dcctech.mafita.frontend.browser.pages.MailCrud
+import io.dcctech.mafita.frontend.browser.pages.OAuthLogin
+import io.dcctech.mafita.frontend.browser.pages.landingPage.About
+import io.dcctech.mafita.frontend.browser.pages.landingPage.Home
+import io.dcctech.mafita.frontend.browser.pages.landingPage.Welcome
 import zakadabar.core.browser.application.ZkAppRouting
 
 class Routing : ZkAppRouting(DefaultLayout, Home) {
@@ -16,6 +22,8 @@ class Routing : ZkAppRouting(DefaultLayout, Home) {
         + MailCrud()
         + Welcome
         + About
+        + Dashboard
+        + OAuthLogin()
 
     }
 

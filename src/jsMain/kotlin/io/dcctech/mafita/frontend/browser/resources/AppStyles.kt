@@ -31,10 +31,9 @@ class AppStyles : ZkCssStyleSheet() {
 
     val nav by cssClass {
         + Display.grid
-        gridTemplateColumns = "repeat(12, max-content)"
-        gridAutoRows = 8.vw
+        gridTemplateColumns = "repeat(12, 1fr)"
+        gridAutoRows = 9.vw
         + JustifyContent.center
-        + AlignItems.baseLine
         + Position.fixed
         top = "0"
         width = "100%"
@@ -75,6 +74,7 @@ class AppStyles : ZkCssStyleSheet() {
         + AlignItems.center
         color = theme.primaryColor
     }
+
 //  TODO would look more natural this way
 
 //    val wave by cssClass {

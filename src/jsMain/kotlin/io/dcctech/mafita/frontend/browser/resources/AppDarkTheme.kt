@@ -7,6 +7,7 @@ import zakadabar.core.browser.layout.zkScrollBarStyles
 import zakadabar.core.browser.sidebar.zkSideBarStyles
 import zakadabar.core.browser.titlebar.zkTitleBarStyles
 import zakadabar.core.resource.ZkColors
+import zakadabar.core.resource.theme
 import zakadabar.core.util.alpha
 import zakadabar.softui.browser.theme.SuiDarkTheme
 
@@ -44,6 +45,7 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
         }
 
         with(zkTitleBarStyles) {
+            appTitleBarText = theme.primaryColor
             appHandleBackground = blockBackgroundColor
             appHandleText = textColor
             appHandleBorder = "1px solid $primaryColor"
