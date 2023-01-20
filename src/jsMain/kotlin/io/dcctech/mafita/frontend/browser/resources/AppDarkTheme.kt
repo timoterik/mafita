@@ -7,7 +7,6 @@ import zakadabar.core.browser.layout.zkScrollBarStyles
 import zakadabar.core.browser.sidebar.zkSideBarStyles
 import zakadabar.core.browser.titlebar.zkTitleBarStyles
 import zakadabar.core.resource.ZkColors
-import zakadabar.core.resource.theme
 import zakadabar.core.util.alpha
 import zakadabar.softui.browser.theme.SuiDarkTheme
 
@@ -19,12 +18,15 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
 
     override val name = NAME
 
-    override var primaryColor = "#DF6107"
+
+//    override var primaryColor = "#DF6107"
+
+    override var mafitaColor = "#DF6107"
+    override val mafitaLogoSVGColor = "black"
     override var homepageBgColorOne = ZkColors.black
     override var homepageBgColorTwo = ZkColors.BlueGray.c300
     override var homepageTextColorOne = ZkColors.Gray.c50
     override var homepageTextColorTwo = ZkColors.BlueGray.c400
-    override var secondaryColor = "black"
 
     override fun onResume() {
         super<SuiDarkTheme>.onResume()
@@ -45,10 +47,10 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
         }
 
         with(zkTitleBarStyles) {
-            appTitleBarText = theme.primaryColor
+            appTitleBarText = mafitaTheme.mafitaColor
             appHandleBackground = blockBackgroundColor
             appHandleText = textColor
-            appHandleBorder = "1px solid $primaryColor"
+            appHandleBorder = "1px solid ${mafitaTheme.mafitaColor}"
             appTitleBarBackground = blockBackgroundColor
             appTitleBarBorder = appHandleBorder
         }

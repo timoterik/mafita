@@ -37,13 +37,22 @@ class AppStyles : ZkCssStyleSheet() {
         + Position.fixed
         top = "0"
         width = "100%"
-        backgroundImage = "url(/wave_${theme.secondaryColor}.svg)"
+        backgroundImage = "url(/wave_${mafitaTheme.mafitaLogoSVGColor}.svg)"
+        color = mafitaTheme.mafitaColor
+    }
+
+    val mafitaColor by cssClass {
+        color = mafitaTheme.mafitaColor
     }
 
     val homePageStyleOne by cssClass {
         zkScrollBarStyles.enabled = false
         backgroundColor = mafitaTheme.homepageBgColorOne
         color = mafitaTheme.homepageTextColorOne
+    }
+
+    val paddingTop1andHalf5VW by cssClass {
+        paddingTop = 1.5.vw
     }
 
     val homePageStyleTwo by cssClass {
@@ -72,7 +81,7 @@ class AppStyles : ZkCssStyleSheet() {
     val welcomePageLogo by cssClass {
         + JustifyContent.center
         + AlignItems.center
-        color = theme.primaryColor
+        color = mafitaTheme.mafitaColor
     }
 
 //  TODO would look more natural this way
