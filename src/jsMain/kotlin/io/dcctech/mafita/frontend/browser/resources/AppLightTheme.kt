@@ -32,6 +32,7 @@ class AppLightTheme : SuiLightTheme(), MafitaTheme {
     override var homepageTextColorOne = ZkColors.black
     override var homepageTextColorTwo = ZkColors.white
 
+    override var backgroundColor: String = ZkColors.white
     override fun onResume() {
         super<SuiLightTheme>.onResume()
 

@@ -34,6 +34,7 @@ class MafitaHeader : ZkElement() {
         + btnWithoutBg(strings.documents) { toastSuccess { "Click on ${strings.documents}" } },
         + btnWithoutBg(strings.contact) { toastSuccess { "Click on ${strings.contact}" } }
     )
+
     override fun onCreate() {
         super.onCreate()
 

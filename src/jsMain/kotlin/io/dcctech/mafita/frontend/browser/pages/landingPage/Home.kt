@@ -15,5 +15,11 @@ object Home : ZkPage(ZkFullScreenLayout, zkDefaultLayoutStyles.popupSideBarConta
         + MafitaHeader()
         + Welcome
         + About
+        + ClubAndCru
+//        + CampNCommunityService
+//        + Donation
+//        + Contributors
+//        + MafitaFooter()
+
     }
 }

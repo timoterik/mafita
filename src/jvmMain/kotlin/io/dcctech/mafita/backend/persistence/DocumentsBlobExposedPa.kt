@@ -11,13 +11,13 @@ import zakadabar.lib.blobs.persistence.BlobExposedTable
 
 
 class DocumentBlobExposedPa : BlobExposedPa<DocumentBlob, DocumentBo>(
-   table = DocumentBlobExposedTable,
+    table = DocumentBlobExposedTable,
 ) {
-   override fun newInstance() = default<DocumentBlob> { }
+    override fun newInstance() = default<DocumentBlob> { }
 }
 
 
 object DocumentBlobExposedTable : BlobExposedTable<DocumentBlob, DocumentBo>(
-   tableName = "document_blob",
-   referenceTable = DocumentTableDefault
+    tableName = "document_blob",
+    referenceTable = DocumentTableDefault
 )

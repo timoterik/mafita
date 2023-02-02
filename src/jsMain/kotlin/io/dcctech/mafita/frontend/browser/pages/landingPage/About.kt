@@ -4,38 +4,21 @@
 package io.dcctech.mafita.frontend.browser.pages.landingPage
 
 
+import io.dcctech.mafita.frontend.browser.components.PageElementData
+import io.dcctech.mafita.frontend.browser.components.SinglePageElement
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
-import zakadabar.core.browser.layout.ZkFullScreenLayout
-import zakadabar.core.browser.layout.zkScrollBarStyles
-import zakadabar.core.browser.page.ZkPage
-import zakadabar.core.resource.css.Position
 import zakadabar.lib.blobs.browser.blobStyles
 
-object About : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar) {
 
-    override fun onCreate() {
-
-        setAppTitle = false
-        + appStyles.homePageStyleOne
-
-        + row {
-            + grid {
-                width = "200%" //Todo it looks very ugly
-                + Position.relative
-                + image("/about_1.png", blobStyles.image)
-                + h4 {
-                    + appStyles.aboutPageTitleText
-                    + strings.about
-                }
-                + p {
-                    + appStyles.aboutPageText
-                    + strings.aboutText
-                }
-            }
-            + grid {
-                + image("/about_with_team.png", blobStyles.image)
-            }
-        }
-    }
-}
+object About : SinglePageElement(
+    listOf(
+        PageElementData(
+            title = Pair(strings.about, appStyles.let { listOf(it.fontSize2vw, it.aboutTitle, it.paddingLeft2vw) }),
+            text = Pair(strings.aboutText, appStyles.let { listOf(it.fontSize1dot2vw, it.aboutText, it.paddingLeft2vw, it.minusMarginTop2vw) }),
+            image = Triple("/about_1.png", blobStyles.image, appStyles.aboutFirstImg),
+            image2 = Triple("/about_with_team.png", blobStyles.image, appStyles.aboutSecondImg),
+            elementStyles = appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }
+        )
+    )
+)

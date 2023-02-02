@@ -60,7 +60,7 @@ kotlin {
     }
 
     js(IR) {
-        browser{
+        browser {
             testTask {
                 enabled = ! isPublishing
             }
@@ -108,10 +108,12 @@ docker {
     pull(true)
     setDockerfile(file("Dockerfile"))
 
-    buildArgs(mapOf(
-        "BUILD_NUMBER" to Date().toString(),
-        "STACK_VERSION" to stackVersion
-    ))
+    buildArgs(
+        mapOf(
+            "BUILD_NUMBER" to Date().toString(),
+            "STACK_VERSION" to stackVersion
+        )
+    )
 
 
 }
