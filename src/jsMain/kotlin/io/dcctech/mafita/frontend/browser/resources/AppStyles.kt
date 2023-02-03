@@ -95,8 +95,6 @@ class AppStyles : ZkCssStyleSheet() {
     val pageElementStyle by cssClass {
         + Display.grid
         backgroundColor = theme.backgroundColor
-//        gridTemplateColumns = "repeat(6, 1fr)"
-//        gridTemplateRows = "repeat(6, 1fr)"
     }
 
     val welcomePageSlogan by cssClass {
@@ -165,22 +163,21 @@ class AppStyles : ZkCssStyleSheet() {
         maxHeight = 100.percent
     }
 
-    val campTitle by cssClass {
-        gridColumnStart = 3
-        gridColumnEnd = 5
+    val cruTitle by cssClass {
+        gridColumnStart = 4
+        gridColumnEnd = 4
         gridRowStart = 3
         gridRowEnd = 3
-        + JustifySelf.end
         + AlignSelf.end
-
+        + TextAlign.right
     }
 
-    val campText by cssClass {
+    val cruText by cssClass {
         gridColumnStart = 3
         gridColumnEnd = 5
         gridRowStart = 4
         gridRowEnd = 6
-        + JustifySelf.end
+        + TextAlign.right
 
     }
 
@@ -197,6 +194,45 @@ class AppStyles : ZkCssStyleSheet() {
         gridColumnEnd = 3
         gridRowStart = 2
         gridRowEnd = 4
+    }
+
+    val campTitle by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 1
+        gridRowStart = 1
+        gridRowEnd = 1
+        + AlignSelf.center
+    }
+
+    val campText by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 4
+        gridRowStart = 2
+        gridRowEnd = 4
+    }
+
+    val communityServiceTitle by cssClass {
+        gridColumnStart = 4
+        gridColumnEnd = 5
+        gridRowStart = 3
+        gridRowEnd = 3
+        + TextAlign.right
+
+    }
+
+    val communityServiceText by cssClass {
+        gridColumnStart = 4
+        gridColumnEnd = 5
+        gridRowStart = 4
+        gridRowEnd = 6
+        + TextAlign.right
+    }
+
+    val campCommunityServiceImg by cssClass {
+        gridColumnStart = 2
+        gridColumnEnd = 4
+        gridRowStart = 4
+        gridRowEnd = 6
     }
 
     val cards by cssClass {
@@ -289,6 +325,10 @@ class AppStyles : ZkCssStyleSheet() {
 
     val paddingLeft2vw by cssClass {
         paddingLeft = 2.vw
+    }
+
+    val paddingRight2vw by cssClass {
+        paddingRight = 2.vw
     }
 
     val minusMarginTop2vw by cssClass {
