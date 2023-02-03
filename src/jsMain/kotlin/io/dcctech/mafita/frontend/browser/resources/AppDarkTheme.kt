@@ -18,12 +18,15 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
 
     override val name = NAME
 
-    override var primaryColor = "#DF6107"
+
+//    override var primaryColor = "#DF6107"
+
+    override var mafitaColor = "#DF6107"
+    override val mafitaLogoSVGColor = "black"
     override var homepageBgColorOne = ZkColors.black
-    override var homepageBgColorTwo = ZkColors.white
-    override var homepageTextColorOne = ZkColors.white
-    override var homepageTextColorTwo = ZkColors.black
-    override var secondaryColor = "black"
+    override var homepageBgColorTwo = ZkColors.BlueGray.c300
+    override var homepageTextColorOne = ZkColors.Gray.c50
+    override var homepageTextColorTwo = ZkColors.BlueGray.c400
 
     override fun onResume() {
         super<SuiDarkTheme>.onResume()
@@ -44,9 +47,10 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
         }
 
         with(zkTitleBarStyles) {
+            appTitleBarText = mafitaTheme.mafitaColor
             appHandleBackground = blockBackgroundColor
             appHandleText = textColor
-            appHandleBorder = "1px solid $primaryColor"
+            appHandleBorder = "1px solid ${mafitaTheme.mafitaColor}"
             appTitleBarBackground = blockBackgroundColor
             appTitleBarBorder = appHandleBorder
         }

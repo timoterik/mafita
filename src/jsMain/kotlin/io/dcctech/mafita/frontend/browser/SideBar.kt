@@ -6,6 +6,7 @@ package io.dcctech.mafita.frontend.browser
 
 import io.dcctech.mafita.frontend.browser.pages.DocumentCrud
 import io.dcctech.mafita.frontend.browser.pages.MailCrud
+import io.dcctech.mafita.frontend.browser.pages.OAuthLogin
 import io.dcctech.mafita.resources.strings
 import kotlinx.browser.window
 import zakadabar.core.authorize.appRoles
@@ -14,7 +15,6 @@ import zakadabar.core.browser.util.io
 import zakadabar.core.resource.localized
 import zakadabar.lib.accounts.browser.accounts.Account
 import zakadabar.lib.accounts.browser.accounts.AccountSecure
-import zakadabar.lib.accounts.browser.login.Login
 import zakadabar.lib.accounts.browser.roles.Roles
 import zakadabar.lib.accounts.data.LogoutAction
 import zakadabar.lib.i18n.browser.LocaleCrud
@@ -26,7 +26,7 @@ class SideBar : ZkSideBar() {
         super.onCreate()
 
         ifAnonymous {
-            + item<Login>()
+            + item<OAuthLogin>()
         }
 
         ifNotAnonymous {

@@ -16,8 +16,6 @@ internal var strings = AppStrings()
 
 class AppStrings : ZkBuiltinStrings() {
     override val applicationName by "Mafita"
-    val exampleEntityCrud by "Example Entities"
-
     // these will most likely change a bit with the first release of July 2021
 
     override val accountName by "Account Name"
@@ -33,15 +31,85 @@ class AppStrings : ZkBuiltinStrings() {
     val document by "Document"
     val slogan by "Experiences of a lifetime"
     val about by "About"
-    val aboutText by """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo consequat velit sed porta. Mauris sollicitudin est ante, non laoreet odio elementum ut. Proin tincidunt metus vitae egestas auctor. Praesent efficitur turpis at elementum fermentum. Donec id viverra purus. Ut lacinia semper dui iaculis finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur id tempus dui. Nullam risus metus, tempor nec orci et, interdum viverra tortor. Vivamus libero augue, ultrices at ligula sit amet, elementum convallis ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n" +
-            "Aliquam odio odio, aliquet eu orci non, faucibus malesuada enim. Nullam at quam erat. Maecenas tincidunt efficitur ultricies. Cras erat est, viverra vel ex a, mollis posuere nulla. Etiam laoreet id mi ut ornare. Donec non nunc eleifend, convallis tortor in, pharetra ligula. Sed iaculis faucibus dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut blandit ut neque et tincidunt."""
+    val aboutText by """Lorem ipsum dolor sit amet, consectetur 
+        <br> adipiscing elit. Suspendisse commodo consequat velit 
+        <br> sed porta. Mauris sollicitudin est ante, non laoreet odio elemen.
+        <br>Proin tincidunt metus vitae egestas auctor. 
+        <br>Praesent efficitur turpis at elementum fermentum. Donec id viverra. 
+        <br>Ut lacinia semper dui iaculis finibus. Vestibulum ante ipsum primis 
+        <br>orci luctus et ultrices posuere cubilia curae; Curabitur id tempus dui. 
+        <br>Nullam risus metus, tempor nec orci et, interdum viverra tortor. 
+        <br>Vivamus libero augue, ultrices at ligula sit amet, elementum convallis. 
+        <br>Pellentesque habitant morbi tristique senectus et netus et malesuada 
+        <br>ac turpis egestas. Etiam laoreet id mi ut ornare. Donec non nunc, 
+        <br>convallis tortor in, pharetra ligula. Sed iaculis faucibus dignissim. 
+        <br>Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+        <br>Class aptent taciti sociosqu ad litora torquent per conubia, 
+        <br>Class aptent taciti sociosqu ad litora torquent per, 
+        <br>per inceptos himenaeos. Ut blandit ut neque.
+        <br>per inceptos himenaeos. Ut blandit ut.
+        <br>
+    """.trimIndent()
     val fridayClub by "Friday club"
     val cruSzeged by "Cru Szeged"
     val camp by "Camp"
+    val campText by """Lorem ipsum dolor sit amet, consectetur 
+        <br> adipiscing elit. Suspendisse commodo consequat velit 
+        <br> sed porta. Mauris sollicitudin est ante, non laoreet odio elemen.
+        <br>Proin tincidunt metus vitae egestas auctor. 
+        <br>Praesent efficitur turpis at elementum fermentum. Donec id viverra. 
+        <br>Ut lacinia semper dui iaculis finibus. Vestibulum ante ipsum primis 
+        <br>orci luctus et ultrices posuere cubilia curae; Curabitur id tempus dui. 
+        <br>Nullam risus metus, tempor nec orci et, interdum viverra tortor. 
+        <br>Vivamus libero augue, ultrices at ligula sit amet, elementum convallis. 
+        <br>Pellentesque habitant morbi tristique senectus et netus et malesuada 
+        <br>ac turpis egestas. Etiam laoreet id mi ut ornare. Donec non nunc, 
+        <br>convallis tortor in, pharetra ligula. Sed iaculis faucibus dignissim. 
+        <br>Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+        <br>Class aptent taciti sociosqu ad litora torquent per conubia, 
+        <br>Class aptent taciti sociosqu ad litora torquent per, 
+        <br>per inceptos himenaeos. Ut blandit ut neque.
+        <br>per inceptos himenaeos. Ut blandit ut.
+        <br>
+    """.trimIndent()
     val communityService by "Community service"
+    val communityServiceText by """Lorem ipsum dolor sit amet, consectetur 
+        <br> adipiscing elit. Suspendisse commodo consequat velit 
+        <br> sed porta. Mauris sollicitudin est ante, non laoreet odio elemen.
+        <br>Proin tincidunt metus vitae egestas auctor. 
+        <br>Praesent efficitur turpis at elementum fermentum. Donec id viverra. 
+        <br>Ut lacinia semper dui iaculis finibus. Vestibulum ante ipsum primis 
+        <br>orci luctus et ultrices posuere cubilia curae; Curabitur id tempus dui. 
+        <br>Nullam risus metus, tempor nec orci et, interdum viverra tortor. 
+        <br>Vivamus libero augue, ultrices at ligula sit amet, elementum convallis. 
+        <br>Pellentesque habitant morbi tristique senectus et netus et malesuada 
+        <br>ac turpis egestas. Etiam laoreet id mi ut ornare. Donec non nunc, 
+        <br>convallis tortor in, pharetra ligula. Sed iaculis faucibus dignissim. 
+        <br>Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+        <br>Class aptent taciti sociosqu ad litora torquent per conubia, 
+        <br>Class aptent taciti sociosqu ad litora torquent per, 
+        <br>per inceptos himenaeos. Ut blandit ut neque.
+        <br>per inceptos himenaeos. Ut blandit ut.
+        <br>
+    """.trimIndent()
     val donation by "Donation"
+    val donationOnePercent by "1% financial support"
+    val donationText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget.\""
     val contributors by "Contributors"
     val contact by "Contact"
+    val fridayClubText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget."
+    val cruSzegedText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget."
+    val mafitaFullName by "Mai Fiatalok Támogatásáért Közhasznú Egyesület\n\n(MAFITA Egyesület)"
+    val mafitaAddress by "6724 Szeged, Teréz utca 45/B"
+    val organizationAddress by "Headquarters"
+    val mafitaPhoneNumber by "+36308232856"
+    val mafitaEmailAddress = "mafita@mafita.hu"
+    val corporateTaxNumber by "Corporate tax number"
+    val mafitaTaxNumber by "18477931-1-06"
+    val bankAccountNumberOfMafita by "10700433-44930501-51100005"
+    val bankAccountNumberOfOrganization by "Bank account number"
+    val mafitaInstagramUrl by "https://www.instagram.com/mafitaegyesulet"
+    val mafitaFacebookUrl by "https://www.facebook.com/mafita.egyesulet/"
 
 
 }

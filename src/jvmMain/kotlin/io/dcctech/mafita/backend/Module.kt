@@ -12,7 +12,6 @@ import zakadabar.core.authorize.SimpleRoleAuthorizerProvider
 import zakadabar.core.module.modules
 import zakadabar.core.route.RoutedModule
 import zakadabar.core.util.PublicApi
-import zakadabar.lib.schedule.business.WorkerBl
 
 @PublicApi
 object Module : RoutedModule {
@@ -24,27 +23,25 @@ object Module : RoutedModule {
     }
 
     override fun onModuleLoad() {
-        zakadabar.lib.accounts.install(MyRoles)
+        zakadabar.lib.accounts.install(MafitaRoles)
         zakadabar.lib.i18n.install()
+        zakadabar.lib.schedule.install()
+        zakadabar.lib.email.install()
+
 
         modules += SimpleRoleAuthorizerProvider {
             all = LOGGED_IN
-            delete = MyRoles.siteUser
+            delete = MafitaRoles.siteUser
         }
 
-
-        zakadabar.lib.schedule.install()
-        modules += WorkerBl("worker1")
-
-        zakadabar.lib.email.install()
-
+//        modules += WorkerBl("worker1")  We will need this in the future
         modules += DocumentBl()
         modules += DocumentBlobBl()
     }
 
 }
 
-object MyRoles : AppRolesBase() {
+object MafitaRoles : AppRolesBase() {
     val contributor by "contributor"
     val siteUser by "site-member"
     val student by "student"

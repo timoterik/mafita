@@ -3,16 +3,13 @@
  */
 package io.dcctech.mafita.frontend.browser.pages
 
-import io.dcctech.mafita.frontend.browser.components.MafitaHeader
-import zakadabar.core.browser.layout.ZkFullScreenLayout
+import io.dcctech.mafita.frontend.browser.resources.appStyles
 import zakadabar.core.browser.page.ZkPage
+import zakadabar.core.browser.util.plusAssign
 
-object Home : ZkPage(ZkFullScreenLayout) {
+object Dashboard : ZkPage() {
 
     override fun onCreate() {
-        super.onCreate()
-        + MafitaHeader()
-        + Welcome
-        + About
+        classList += appStyles.home
     }
 }

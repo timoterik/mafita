@@ -23,16 +23,16 @@ class AppLightTheme : SuiLightTheme(), MafitaTheme {
     // Customize theme variables
     // -------------------------------------------------------------------------
 
-    override var primaryColor = "#DF6107"
+//    override var primaryColor = "#DF6107"
 
+    override var mafitaColor = "#DF6107"
+    override val mafitaLogoSVGColor = "white"
     override var homepageBgColorOne = ZkColors.white
     override var homepageBgColorTwo = ZkColors.black
     override var homepageTextColorOne = ZkColors.black
     override var homepageTextColorTwo = ZkColors.white
 
-    override var secondaryColor = "white"
-
-
+    override var backgroundColor: String = ZkColors.white
     override fun onResume() {
         super<SuiLightTheme>.onResume()
 
@@ -52,9 +52,10 @@ class AppLightTheme : SuiLightTheme(), MafitaTheme {
         }
 
         with(zkTitleBarStyles) {
+            appTitleBarText = mafitaTheme.mafitaColor
             appHandleBackground = blockBackgroundColor
             appHandleText = textColor
-            appHandleBorder = "1px solid $primaryColor"
+            appHandleBorder = "1px solid ${mafitaTheme.mafitaColor}"
             appTitleBarBackground = blockBackgroundColor
             appTitleBarBorder = appHandleBorder
         }

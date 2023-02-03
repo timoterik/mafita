@@ -9,8 +9,8 @@ import io.dcctech.mafita.data.DocumentBo
 import zakadabar.lib.blobs.business.BlobBlBase
 
 class DocumentBlobBl : BlobBlBase<DocumentBlob, DocumentBo>(
-   DocumentBlob::class,
-   DocumentBlobExposedPa()
+    DocumentBlob::class,
+    DocumentBlobExposedPa()
 ) {
-   override val authorizer by provider()
+    override val authorizer by provider()
 }

@@ -10,6 +10,8 @@ val mafitaTheme: MafitaTheme
     get() = theme as MafitaTheme
 
 interface MafitaTheme : ZkTheme {
+    val mafitaColor: String
+    val mafitaLogoSVGColor: String
     val homepageBgColorOne: String
     val homepageBgColorTwo: String
     val homepageTextColorOne: String

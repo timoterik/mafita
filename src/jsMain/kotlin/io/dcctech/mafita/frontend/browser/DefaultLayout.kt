@@ -6,7 +6,7 @@ package io.dcctech.mafita.frontend.browser
 import io.dcctech.mafita.frontend.browser.components.AppHeader
 import zakadabar.softui.browser.layout.SuiDefaultLayout
 
-object DefaultLayout : SuiDefaultLayout() {
+object DefaultLayout : SuiDefaultLayout(resizeSidebar = true) {
     override fun onCreate() {
         super.onCreate()
 

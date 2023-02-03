@@ -60,7 +60,7 @@ kotlin {
     }
 
     js(IR) {
-        browser{
+        browser {
             testTask {
                 enabled = ! isPublishing
             }
@@ -74,14 +74,12 @@ kotlin {
         implementation("hu.simplexion.zakadabar:blobs:$stackVersion")
         implementation("hu.simplexion.zakadabar:i18n:$stackVersion")
         implementation("hu.simplexion.zakadabar:softui:$stackVersion")
+        implementation("hu.simplexion.zakadabar:markdown:$stackVersion")
         implementation("hu.simplexion.zakadabar:schedule:$stackVersion")
         implementation("hu.simplexion.zakadabar:email:$stackVersion")
 
     }
 
-    sourceSets["jvmMain"].dependencies {
-        implementation("com.h2database:h2:1.4.200")
-    }
 }
 
 // -----------------------------------------------------------------------------
@@ -110,10 +108,12 @@ docker {
     pull(true)
     setDockerfile(file("Dockerfile"))
 
-    buildArgs(mapOf(
-        "BUILD_NUMBER" to Date().toString(),
-        "STACK_VERSION" to stackVersion
-    ))
+    buildArgs(
+        mapOf(
+            "BUILD_NUMBER" to Date().toString(),
+            "STACK_VERSION" to stackVersion
+        )
+    )
 
 
 }
