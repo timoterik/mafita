@@ -57,6 +57,13 @@ open class SinglePageElement(
                     zkeCss?.let { + it }
                 }
             }
+
+            e.component?.let { (component, listOfCss) ->
+                + zke {
+                    + component
+                    listOfCss?.forEach { css -> + css }
+                }
+            }
         }
     }
 }

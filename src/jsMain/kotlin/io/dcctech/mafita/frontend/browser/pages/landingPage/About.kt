@@ -16,9 +16,12 @@ object About : SinglePageElement(
         PageElementData(
             title = Pair(strings.about, appStyles.let { listOf(it.fontSize2vw, it.aboutTitle, it.paddingLeft2vw) }),
             text = Pair(strings.aboutText, appStyles.let { listOf(it.fontSize1dot2vw, it.aboutText, it.paddingLeft2vw, it.minusMarginTop2vw) }),
-            image = Triple("/about_1.png", blobStyles.image, appStyles.aboutFirstImg),
-            image2 = Triple("/about_with_team.png", blobStyles.image, appStyles.aboutSecondImg),
+            image = Triple("/about_1.png", blobStyles.image, appStyles.aboutFirstImgDiv),
+            image2 = Triple("/about_team.jpg", appStyles.aboutSecondImg, appStyles.aboutSecondImgDiv),
             elementStyles = appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }
+        ),
+        PageElementData(
+            image2 = Triple("/about_2.png", blobStyles.image, appStyles.aboutThirdImgDiv),
         )
     )
 )
