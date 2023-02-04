@@ -4,6 +4,7 @@
 package io.dcctech.mafita.frontend.browser.resources
 
 import zakadabar.core.browser.layout.zkScrollBarStyles
+import zakadabar.core.resource.ZkColors
 import zakadabar.core.resource.css.*
 
 val appStyles by cssStyleSheet(AppStyles())
@@ -36,7 +37,7 @@ class AppStyles : ZkCssStyleSheet() {
         + JustifyContent.center
         + Position.fixed
         top = "0"
-        width = "100%"
+        width = 100.percent
         backgroundImage = "url(/wave_${mafitaTheme.mafitaLogoSVGColor}.svg)"
         color = mafitaTheme.mafitaColor
     }
@@ -84,13 +85,6 @@ class AppStyles : ZkCssStyleSheet() {
         color = mafitaTheme.homepageTextColorTwo
     }
 
-    val clubNCruPage by cssClass {
-        height40VW
-    }
-
-    val donationPage by cssClass {
-        backgroundImage = "url(/clubNCruBg.jpg)" //FIXME should change
-    }
 
     val pageElementStyle by cssClass {
         + Display.grid
@@ -230,7 +224,6 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowStart = 3
         gridRowEnd = 3
         + TextAlign.right
-
     }
 
     val communityServiceText by cssClass {
@@ -248,6 +241,20 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowEnd = 6
     }
 
+    val contributorsTitle by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 1
+        gridRowStart = 1
+        gridRowEnd = 1
+        + TextAlign.left
+    }
+
+    val contributorPicture by cssClass {
+        borderRadius = 50.percent
+        maxWidth = 100.percent
+        maxHeight = 100.percent
+    }
+
     val cards by cssClass {
         gridTemplateColumns = "repeat( auto-fit, minmax( 250px, 1fr ) )"
         gap = 20.px
@@ -257,13 +264,11 @@ class AppStyles : ZkCssStyleSheet() {
     val card by cssClass {
         + Display.flex
         + FlexDirection.row
-        + JustifyContent.center
-        + AlignSelf.stretch
     }
 
     val cardInner by cssClass {
-        width = 250.px
-        border = theme.border
+        width = 30.vw
+        border = ZkColors.Red.a100
         borderRadius = 2.px
     }
 
@@ -309,14 +314,26 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowEnd = 6
     }
 
+    val contributorImgDiv by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 2
+        gridRowStart = 1
+        gridRowEnd = 3
+    }
 
+    val contributorTextDiv by cssClass {
+        gridColumnStart = 3
+        gridColumnEnd = 4
+        gridRowStart = 1
+        gridRowEnd = 3
+    }
     val cardText by cssClass {
         padding = 20.px
     }
 
     val fivePanels by cssClass {
         display = "grid"
-        width = "100%"
+        width = 100.percent
         overflow = "auto"
         gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr"
         gap = 4.px
@@ -324,7 +341,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val sixPanels by cssClass {
         display = "grid"
-        width = "100%"
+        width = 100.percent
         overflow = "auto"
         gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr"
         gap = 4.px
@@ -332,7 +349,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val threeRows by cssClass {
         display = "grid"
-        width = "100%"
+        width = 100.percent
         overflow = "auto"
         gridTemplateColumns = "1fr 1fr 1fr"
         gap = 4.px
@@ -340,7 +357,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val twoRows by cssClass {
         display = "grid"
-        height = "100%"
+        height = 100.percent
         overflow = "auto"
         gridTemplateRows = "1fr 1fr"
         gap = 4.px
@@ -352,7 +369,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val grid by cssClass {
         display = "grid"
-        height = "100%"
+        height = 100.percent
     }
 
     val twoColumns by cssClass {
@@ -395,7 +412,7 @@ class AppStyles : ZkCssStyleSheet() {
 //            content = ""
 //            + Display.block
 //            + Position.absolute
-//            borderRadius = "100% 50%"
+//            borderRadius = "100% 50.percent
 //            width = 340.px
 //            height = 80.px
 //            backgroundColor = ZkColors.white
@@ -407,7 +424,7 @@ class AppStyles : ZkCssStyleSheet() {
 //            content = ""
 //            + Display.block
 //            + Position.absolute
-//            borderRadius = "100% 50%"
+//            borderRadius = "100% 50.percent
 //            width = 300.px
 //            height = 70.px
 //            backgroundColor = "#e0efe3"

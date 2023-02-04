@@ -5,32 +5,30 @@ package io.dcctech.mafita.frontend.browser.pages.landingPage
 
 
 import io.dcctech.mafita.data.ContributorBo
+import io.dcctech.mafita.frontend.browser.components.PageElementData
+import io.dcctech.mafita.frontend.browser.components.SinglePageElement
+import io.dcctech.mafita.frontend.browser.pages.landingPage.Contributors.createTable
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.ZkElement
-import zakadabar.core.browser.layout.ZkFullScreenLayout
-import zakadabar.core.browser.layout.zkScrollBarStyles
-import zakadabar.core.browser.page.ZkPage
-import zakadabar.core.browser.util.plusAssign
 import zakadabar.core.data.EntityId
-import zakadabar.lib.blobs.browser.blobStyles
 
-object Contributors : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar) {
 
-    override fun onCreate() {
+object Contributors : SinglePageElement(
+    listOf(
+        PageElementData(
+            title = Pair(strings.contributors, appStyles.let { listOf(it.fontSize2vw, it.contributorsTitle, it.paddingLeft2vw, it.paddingRight2vw) }),
+        ),
+        PageElementData(
+            component = Pair(createTable(), listOf(appStyles.cards))
+        )
+    ),
+    appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }
+) {
 
-        setAppTitle = false
-        + appStyles.homePageStyleOne
-
-        + row {
-            + h4 {
-                + strings.contributors
-            } //css appStyles.textLeft css appStyles.top5vw
-
-            + grid(appStyles.cards) {
-                testData.forEach { + ContributorCard(it) }
-            }
-        } css appStyles.donationPage
+    fun createTable() = zke {
+        + appStyles.cards
+        testData.forEach { + ContributorCard(it) }
     }
 
     class ContributorCard(
@@ -38,29 +36,24 @@ object Contributors : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar
     ) : ZkElement() {
 
         override fun onCreate() {
-            classList += appStyles.card
-            + div(appStyles.cardInner) {
-                + row {
-                    + column {
-                        + div(appStyles.cardTitle) { + image("/man.png", blobStyles.image) }
-                    }
-                    + column {
-                        + div(appStyles.cardTitle) {
-                            + bo.name
-                        }
-                        + div(appStyles.cardTitle) { + bo.position }
-                    }
+            + zke(appStyles.cardInner) {
+                + zke {
+                    + appStyles.contributorImgDiv
+                    + image("/man.png", appStyles.contributorPicture)
                 }
-                + row {
-                    + p { + bo.introduction }
+                + zke {
+                    + appStyles.contributorTextDiv
+                    + zke(appStyles.cardTitle) { + bo.name }
+                    + zke(appStyles.cardTitle) { + bo.position }
+                    + zke { + p { + ! bo.introduction } }
                 }
-
             }
         }
     }
 }
 
-val testData = listOf<ContributorBo>(
+
+val testData = listOf(
     ContributorBo(
         EntityId(0),
         "Rose Lyman",
