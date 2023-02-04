@@ -3,6 +3,7 @@
  */
 package io.dcctech.mafita.frontend.browser.components
 
+import zakadabar.core.browser.ZkElement
 import zakadabar.core.resource.css.ZkCssStyleRule
 
 
@@ -12,6 +13,7 @@ data class PageElementData(
     var text: Pair<String, List<ZkCssStyleRule>?>? = null,
     var image: Triple<String, ZkCssStyleRule?, ZkCssStyleRule?>? = null,
     var image2: Triple<String, ZkCssStyleRule?, ZkCssStyleRule?>? = null,
-    var elementStyles: List<ZkCssStyleRule>? = null
+    var elementStyles: List<ZkCssStyleRule>? = null,
+    var component: Pair<ZkElement, List<ZkCssStyleRule>?>? = null
 
 )

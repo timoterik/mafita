@@ -121,17 +121,30 @@ class AppStyles : ZkCssStyleSheet() {
         + JustifySelf.center
     }
 
-    val aboutFirstImg by cssClass {
+    val aboutFirstImgDiv by cssClass {
         gridColumnStart = 1
         gridColumnEnd = 4
         gridRowStart = 1
         gridRowEnd = 6
     }
 
+    val aboutSecondImgDiv by cssClass {
+        gridColumnStart = 4
+        gridColumnEnd = 5
+        gridRowStart = 1
+        gridRowEnd = 6
+    }
+
     val aboutSecondImg by cssClass {
+        maxWidth = 100.percent
+        maxHeight = 100.percent
+        borderRadius = "20% 80% 75% 25% / 70% 39% 61% 30% "
+    }
+
+    val aboutThirdImgDiv by cssClass {
         gridColumnStart = 4
         gridColumnEnd = 6
-        gridRowStart = 1
+        gridRowStart = 3
         gridRowEnd = 6
     }
 
@@ -158,7 +171,7 @@ class AppStyles : ZkCssStyleSheet() {
     }
 
     val clubAndCruImg by cssClass {
-        borderRadius = "10vw 90vw 10vw 80vw"
+        borderRadius = "0% 100% 0% 100% / 100% 35% 65% 0%"
         maxWidth = 100.percent
         maxHeight = 100.percent
     }
@@ -260,6 +273,42 @@ class AppStyles : ZkCssStyleSheet() {
         fontWeight = 500.weight
         borderBottom = theme.border
     }
+
+    val donationTitle by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 2
+        gridRowStart = 1
+        gridRowEnd = 1
+        + AlignSelf.end
+    }
+
+    val donationText1 by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 5
+        gridRowStart = 2
+        gridRowEnd = 6
+    }
+    val donationText2 by cssClass {
+        gridColumnStart = 7
+        gridColumnEnd = 12
+        gridRowStart = 2
+        gridRowEnd = 4
+    }
+
+    val donationButton by cssClass {
+        gridColumnStart = 9
+        gridColumnEnd = 9
+        gridRowStart = 4
+        gridRowEnd = 4
+    }
+
+    val donationImgDiv by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 12
+        gridRowStart = 1
+        gridRowEnd = 6
+    }
+
 
     val cardText by cssClass {
         padding = 20.px

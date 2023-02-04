@@ -3,6 +3,7 @@
  */
 package io.dcctech.mafita.frontend.browser.resources
 
+import zakadabar.core.browser.button.zkButtonStyles
 import zakadabar.core.browser.layout.zkScrollBarStyles
 import zakadabar.core.browser.sidebar.zkSideBarStyles
 import zakadabar.core.browser.titlebar.zkTitleBarStyles
@@ -60,5 +61,8 @@ class AppLightTheme : SuiLightTheme(), MafitaTheme {
             appTitleBarBorder = appHandleBorder
         }
 
+        with(zkButtonStyles) {
+            primaryColor = mafitaColor
+        }
     }
 }

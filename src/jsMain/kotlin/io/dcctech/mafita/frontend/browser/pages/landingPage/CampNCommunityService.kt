@@ -25,27 +25,3 @@ object CampNCommunityService : SinglePageElement(
     ),
     listOf(appStyles.pageElementStyle)
 )
-//
-//
-// ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar) {
-//
-//    override fun onCreate() {
-//
-//        setAppTitle = false
-//        height = 40.vw
-//
-//        + appStyles.homePageStyleOne
-//
-//        + row {
-//            + grid {
-//                + h4 { + strings.camp } css appStyles.textLeft css appStyles.titleInTopCorner
-//                + p { + strings.campText } css appStyles.textLeft css appStyles.textInTopCorner
-//            }
-//
-//            + grid {
-//                + h4 { + strings.communityService } css appStyles.tittleInBottomCorner css appStyles.textRight
-//                + p { + strings.communityServiceText } css appStyles.textRight css appStyles.textInBottomCorner
-//            }
-//        }
-//    }
-//}

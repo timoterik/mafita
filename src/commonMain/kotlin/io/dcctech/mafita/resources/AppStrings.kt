@@ -94,7 +94,26 @@ class AppStrings : ZkBuiltinStrings() {
     """.trimIndent()
     val donation by "Donation"
     val donationOnePercent by "1% financial support"
-    val donationText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget.\""
+    val donationText1 by """Lorem ipsum dolor sit amet, consectetur 
+        adipiscing elit. Suspendisse commodo consequat velit 
+        sed porta. Mauris sollicitudin est ante, non laoreet odio elemen.
+        Proin tincidunt metus vitae egestas auctor. 
+        Praesent efficitur turpis at elementum fermentum. Donec id viverra. 
+        Ut lacinia semper dui iaculis finibus. Vestibulum ante ipsum primis 
+        orci luctus et ultrices posuere cubilia curae; Curabitur id tempus dui. 
+        Nullam risus metus, tempor nec orci et, interdum viverra tortor. 
+        Vivamus libero augue, ultrices at ligula sit amet, elementum convallis. 
+        Pellentesque habitant morbi tristique senectus et netus et malesuada 
+        ac turpis egestas. Etiam laoreet id mi ut ornare. Donec non nunc, 
+        convallis tortor in, pharetra ligula. Sed iaculis faucibus dignissim. 
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+        Class aptent taciti sociosqu ad litora torquent per conubia, 
+        Class aptent taciti sociosqu ad litora torquent per, 
+        per inceptos himenaeos. Ut blandit ut neque.
+        per inceptos himenaeos. Ut blandit ut.
+        
+    """.trimIndent()
+    val donationText2 by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget."
     val contributors by "Contributors"
     val contact by "Contact"
     val fridayClubText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget."
