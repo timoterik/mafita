@@ -120,16 +120,16 @@ class AppStyles : ZkCssStyleSheet() {
 
     val aboutFirstImgDiv by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 4
+        gridColumnEnd = 8
         gridRowStart = 1
         gridRowEnd = 6
     }
 
     val aboutSecondImgDiv by cssClass {
-        gridColumnStart = 4
-        gridColumnEnd = 5
+        gridColumnStart = 9
+        gridColumnEnd = 11
         gridRowStart = 1
-        gridRowEnd = 6
+        gridRowEnd = 3
     }
 
     val aboutSecondImg by cssClass {
@@ -139,23 +139,22 @@ class AppStyles : ZkCssStyleSheet() {
     }
 
     val aboutThirdImgDiv by cssClass {
-        gridColumnStart = 4
-        gridColumnEnd = 6
-        gridRowStart = 3
+        gridColumnStart = 10
+        gridColumnEnd = 12
+        gridRowStart = 2
         gridRowEnd = 6
     }
 
     val aboutTitle by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 1
+        gridColumnEnd = 9
         gridRowStart = 1
         gridRowEnd = 1
-        + AlignSelf.end
     }
 
     val aboutText by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 4
+        gridColumnEnd = 8
         gridRowStart = 2
         gridRowEnd = 6
     }
@@ -262,6 +261,7 @@ class AppStyles : ZkCssStyleSheet() {
         + Display.grid
         gridTemplateColumns = "repeat(12, 1fr)" //16
         gap = 2.vw
+        margin = 2.vw
 
         on(" div") {
             gridColumn = "span 4" //4
@@ -391,8 +391,8 @@ class AppStyles : ZkCssStyleSheet() {
         paddingRight = 2.vw
     }
 
-    val minusMarginTop2vw by cssClass {
-        marginTop = (- 2).vw
+    val marginTop3vw by cssClass {
+        marginTop = 3.vw
     }
 
 //  TODO would look more natural this way
