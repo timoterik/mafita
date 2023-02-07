@@ -260,30 +260,16 @@ class AppStyles : ZkCssStyleSheet() {
 
     val cards by cssClass {
         + Display.grid
-        gridTemplateColumns = "repeat(16, 1fr)"
-       // on("div") {
-        //       gridColumn = "span 4"
-        //  }
-    // on("div:nth-child(7n + 1)") {
-    //     gridColumn = "3 / span 4"
-    //  }
-    //   on("div:nth-child(7n + 3)") {
-        //        gridColumn = "4/-3"
-    //   }
-    }
+        gridTemplateColumns = "repeat(12, 1fr)" //16
+        gap = 2.vw
 
-    val card by cssClass {
-        on("nth-child(-1n + 3)") {
-            gridColumn = "span 4"
+        on(" div") {
+            gridColumn = "span 4" //4
         }
-        on("nth-last-child(2)") {
-            gridRowStart = 2
+        on(" div:nth-child(5n + 1)") { //(7n + 1)
             gridColumn = "3 / span 4"
         }
-        on("nth-last-child(1)") {
-            gridRowStart = 2
-            gridColumn = "7 / span 4"
-        }
+
     }
 
     val donationTitle by cssClass {
@@ -300,6 +286,8 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowStart = 2
         gridRowEnd = 6
     }
+
+    /**/
     val donationText2 by cssClass {
         gridColumnStart = 7
         gridColumnEnd = 12
@@ -323,7 +311,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val contributorImgDiv by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 3
+        gridColumnEnd = 4
         gridRowStart = 1
         gridRowEnd = 3
         + JustifySelf.center
@@ -331,7 +319,7 @@ class AppStyles : ZkCssStyleSheet() {
     }
 
     val contributorTextDiv by cssClass {
-        gridColumnStart = 4
+        gridColumnStart = 5
         gridColumnEnd = 6
         gridRowStart = 1
         gridRowEnd = 3
