@@ -23,11 +23,10 @@ object Contributors : SinglePageElement(
             component = Pair(createTable(), listOf(appStyles.cards))
         )
     ),
-    appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }
+    listOf(appStyles.pageElementStyle)
 ) {
 
-    fun createTable() = zke {
-        + appStyles.cards
+    fun createTable() = zke(appStyles.cards) {
         testData.forEach { + ContributorCard(it) }
     }
 
@@ -36,16 +35,18 @@ object Contributors : SinglePageElement(
     ) : ZkElement() {
 
         override fun onCreate() {
-            + zke(appStyles.cardInner) {
-                + zke {
+            + appStyles.card
+            + grid {
+                + appStyles.width30vw
+                + column {
                     + appStyles.contributorImgDiv
                     + image("/man.png", appStyles.contributorPicture)
                 }
-                + zke {
+                + column {
                     + appStyles.contributorTextDiv
-                    + zke(appStyles.cardTitle) { + bo.name }
-                    + zke(appStyles.cardTitle) { + bo.position }
-                    + zke { + p { + ! bo.introduction } }
+                    + row(appStyles.paddingLeft2vw) { + zke { + bo.name } css appStyles.fontSize2vw }
+                    + row(appStyles.paddingLeft2vw) { + zke { + bo.position } css appStyles.fontSize1dot5vw }
+                    + row(appStyles.paddingLeft2vw) { + p { + ! bo.introduction } css appStyles.fontSize1dot2vw }
                 }
             }
         }

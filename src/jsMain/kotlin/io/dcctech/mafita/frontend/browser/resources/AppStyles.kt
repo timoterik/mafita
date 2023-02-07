@@ -4,7 +4,6 @@
 package io.dcctech.mafita.frontend.browser.resources
 
 import zakadabar.core.browser.layout.zkScrollBarStyles
-import zakadabar.core.resource.ZkColors
 import zakadabar.core.resource.css.*
 
 val appStyles by cssStyleSheet(AppStyles())
@@ -68,6 +67,10 @@ class AppStyles : ZkCssStyleSheet() {
 
     val width30vw by cssClass {
         width = 30.vw
+    }
+
+    val width45vw by cssClass {
+        width = 45.vw
     }
 
     val homePageStyleOne by cssClass {
@@ -256,27 +259,31 @@ class AppStyles : ZkCssStyleSheet() {
     }
 
     val cards by cssClass {
-        gridTemplateColumns = "repeat( auto-fit, minmax( 250px, 1fr ) )"
-        gap = 20.px
-        + AlignSelf.stretch
+        + Display.grid
+        gridTemplateColumns = "repeat(16, 1fr)"
+       // on("div") {
+        //       gridColumn = "span 4"
+        //  }
+    // on("div:nth-child(7n + 1)") {
+    //     gridColumn = "3 / span 4"
+    //  }
+    //   on("div:nth-child(7n + 3)") {
+        //        gridColumn = "4/-3"
+    //   }
     }
 
     val card by cssClass {
-        + Display.flex
-        + FlexDirection.row
-    }
-
-    val cardInner by cssClass {
-        width = 30.vw
-        border = ZkColors.Red.a100
-        borderRadius = 2.px
-    }
-
-    val cardTitle by cssClass {
-        fontSize = 18.px
-        padding = 20.px
-        fontWeight = 500.weight
-        borderBottom = theme.border
+        on("nth-child(-1n + 3)") {
+            gridColumn = "span 4"
+        }
+        on("nth-last-child(2)") {
+            gridRowStart = 2
+            gridColumn = "3 / span 4"
+        }
+        on("nth-last-child(1)") {
+            gridRowStart = 2
+            gridColumn = "7 / span 4"
+        }
     }
 
     val donationTitle by cssClass {
@@ -316,19 +323,18 @@ class AppStyles : ZkCssStyleSheet() {
 
     val contributorImgDiv by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 2
+        gridColumnEnd = 3
         gridRowStart = 1
         gridRowEnd = 3
+        + JustifySelf.center
+        + AlignSelf.center
     }
 
     val contributorTextDiv by cssClass {
-        gridColumnStart = 3
-        gridColumnEnd = 4
+        gridColumnStart = 4
+        gridColumnEnd = 6
         gridRowStart = 1
         gridRowEnd = 3
-    }
-    val cardText by cssClass {
-        padding = 20.px
     }
 
     val fivePanels by cssClass {
