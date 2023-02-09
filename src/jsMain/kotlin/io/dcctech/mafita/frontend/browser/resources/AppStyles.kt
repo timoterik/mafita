@@ -36,7 +36,7 @@ class AppStyles : ZkCssStyleSheet() {
         + JustifyContent.center
         + Position.fixed
         top = "0"
-        width = "100%"
+        width = 100.percent
         backgroundImage = "url(/wave_${mafitaTheme.mafitaLogoSVGColor}.svg)"
         color = mafitaTheme.mafitaColor
     }
@@ -69,6 +69,10 @@ class AppStyles : ZkCssStyleSheet() {
         width = 30.vw
     }
 
+    val width45vw by cssClass {
+        width = 45.vw
+    }
+
     val homePageStyleOne by cssClass {
         zkScrollBarStyles.enabled = false
         backgroundColor = mafitaTheme.homepageBgColorOne
@@ -84,13 +88,6 @@ class AppStyles : ZkCssStyleSheet() {
         color = mafitaTheme.homepageTextColorTwo
     }
 
-    val clubNCruPage by cssClass {
-        height40VW
-    }
-
-    val donationPage by cssClass {
-        backgroundImage = "url(/clubNCruBg.jpg)" //FIXME should change
-    }
 
     val pageElementStyle by cssClass {
         + Display.grid
@@ -123,16 +120,16 @@ class AppStyles : ZkCssStyleSheet() {
 
     val aboutFirstImgDiv by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 4
+        gridColumnEnd = 8
         gridRowStart = 1
         gridRowEnd = 6
     }
 
     val aboutSecondImgDiv by cssClass {
-        gridColumnStart = 4
-        gridColumnEnd = 5
+        gridColumnStart = 9
+        gridColumnEnd = 11
         gridRowStart = 1
-        gridRowEnd = 6
+        gridRowEnd = 3
     }
 
     val aboutSecondImg by cssClass {
@@ -142,23 +139,22 @@ class AppStyles : ZkCssStyleSheet() {
     }
 
     val aboutThirdImgDiv by cssClass {
-        gridColumnStart = 4
-        gridColumnEnd = 6
-        gridRowStart = 3
+        gridColumnStart = 10
+        gridColumnEnd = 12
+        gridRowStart = 2
         gridRowEnd = 6
     }
 
     val aboutTitle by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 1
+        gridColumnEnd = 9
         gridRowStart = 1
         gridRowEnd = 1
-        + AlignSelf.end
     }
 
     val aboutText by cssClass {
         gridColumnStart = 1
-        gridColumnEnd = 4
+        gridColumnEnd = 8
         gridRowStart = 2
         gridRowEnd = 6
     }
@@ -230,7 +226,6 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowStart = 3
         gridRowEnd = 3
         + TextAlign.right
-
     }
 
     val communityServiceText by cssClass {
@@ -248,30 +243,33 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowEnd = 6
     }
 
+    val contributorsTitle by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 1
+        gridRowStart = 1
+        gridRowEnd = 1
+        + TextAlign.left
+    }
+
+    val contributorPicture by cssClass {
+        borderRadius = 50.percent
+        maxWidth = 100.percent
+        maxHeight = 100.percent
+    }
+
     val cards by cssClass {
-        gridTemplateColumns = "repeat( auto-fit, minmax( 250px, 1fr ) )"
-        gap = 20.px
-        + AlignSelf.stretch
-    }
+        + Display.grid
+        gridTemplateColumns = "repeat(12, 1fr)" //16
+        gap = 2.vw
+        margin = 2.vw
 
-    val card by cssClass {
-        + Display.flex
-        + FlexDirection.row
-        + JustifyContent.center
-        + AlignSelf.stretch
-    }
+        on(" div") {
+            gridColumn = "span 4" //4
+        }
+        on(" div:nth-child(5n + 1)") { //(7n + 1)
+            gridColumn = "3 / span 4"
+        }
 
-    val cardInner by cssClass {
-        width = 250.px
-        border = theme.border
-        borderRadius = 2.px
-    }
-
-    val cardTitle by cssClass {
-        fontSize = 18.px
-        padding = 20.px
-        fontWeight = 500.weight
-        borderBottom = theme.border
     }
 
     val donationTitle by cssClass {
@@ -288,6 +286,8 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowStart = 2
         gridRowEnd = 6
     }
+
+    /**/
     val donationText2 by cssClass {
         gridColumnStart = 7
         gridColumnEnd = 12
@@ -309,14 +309,52 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowEnd = 6
     }
 
+    val contributorImgDiv by cssClass {
+        gridColumnStart = 1
+        gridColumnEnd = 4
+        gridRowStart = 1
+        gridRowEnd = 3
+        + JustifySelf.center
+        + AlignSelf.center
+    }
 
-    val cardText by cssClass {
-        padding = 20.px
+    val contributorTextDiv by cssClass {
+        gridColumnStart = 5
+        gridColumnEnd = 6
+        gridRowStart = 1
+        gridRowEnd = 3
+    }
+
+    val contactPage by cssClass {
+        backgroundColor = mafitaTheme.mafitaColor
+        + Display.grid
+        gap = 2.vw
+    }
+
+    val socialMediaMainDiv by cssClass {
+        gridRowStart = 2
+        gridRowEnd = 2
+        on(" div") {
+            + Display.flex
+            justifyContent = "space-around"
+        }
+    }
+
+    val firstGridRow by cssClass {
+        styles["grid-row"] = "1"
+    }
+
+    val secondGridRow by cssClass {
+        styles["grid-row"] = "2"
+    }
+
+    val socialMediaIcon by cssClass {
+        maxWidth = 40.percent
     }
 
     val fivePanels by cssClass {
         display = "grid"
-        width = "100%"
+        width = 100.percent
         overflow = "auto"
         gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr"
         gap = 4.px
@@ -324,7 +362,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val sixPanels by cssClass {
         display = "grid"
-        width = "100%"
+        width = 100.percent
         overflow = "auto"
         gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr"
         gap = 4.px
@@ -332,7 +370,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val threeRows by cssClass {
         display = "grid"
-        width = "100%"
+        width = 100.percent
         overflow = "auto"
         gridTemplateColumns = "1fr 1fr 1fr"
         gap = 4.px
@@ -340,7 +378,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val twoRows by cssClass {
         display = "grid"
-        height = "100%"
+        height = 100.percent
         overflow = "auto"
         gridTemplateRows = "1fr 1fr"
         gap = 4.px
@@ -352,7 +390,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val grid by cssClass {
         display = "grid"
-        height = "100%"
+        height = 100.percent
     }
 
     val twoColumns by cssClass {
@@ -380,8 +418,8 @@ class AppStyles : ZkCssStyleSheet() {
         paddingRight = 2.vw
     }
 
-    val minusMarginTop2vw by cssClass {
-        marginTop = (- 2).vw
+    val marginTop3vw by cssClass {
+        marginTop = 3.vw
     }
 
 //  TODO would look more natural this way
@@ -395,7 +433,7 @@ class AppStyles : ZkCssStyleSheet() {
 //            content = ""
 //            + Display.block
 //            + Position.absolute
-//            borderRadius = "100% 50%"
+//            borderRadius = "100% 50.percent
 //            width = 340.px
 //            height = 80.px
 //            backgroundColor = ZkColors.white
@@ -407,7 +445,7 @@ class AppStyles : ZkCssStyleSheet() {
 //            content = ""
 //            + Display.block
 //            + Position.absolute
-//            borderRadius = "100% 50%"
+//            borderRadius = "100% 50.percent
 //            width = 300.px
 //            height = 70.px
 //            backgroundColor = "#e0efe3"

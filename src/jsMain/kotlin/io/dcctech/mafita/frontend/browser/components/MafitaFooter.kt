@@ -3,46 +3,44 @@
  */
 package io.dcctech.mafita.frontend.browser.components
 
+import io.dcctech.mafita.frontend.browser.DefaultLayout.zke
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
-import zakadabar.core.browser.ZkElement
-import zakadabar.lib.blobs.browser.blobStyles
 
-class MafitaFooter : ZkElement() {
 
-    override fun onCreate() {
-        super.onCreate()
-
-        + row {
-            h4 {
-                + strings.contact
-            } css appStyles.homePageStyleTwo
-            + column { strings.organizationName }
-            + column {
-                + h3 { + strings.mafitaFullName }
-            }
-            + column {
+object MafitaFooter : SinglePageElement(
+    listOf(
+        PageElementData(
+            title = Pair(strings.contact, appStyles.let { listOf(it.fontSize2vw, it.paddingLeft2vw, it.firstGridRow) }),
+            text = Pair(strings.mafitaFullName, appStyles.let { listOf(it.fontSize1dot2vw, it.paddingLeft2vw, it.secondGridRow) }),
+        ),
+        PageElementData(
+            component = Pair(zke {
                 + p { + "${strings.organizationAddress}: ${strings.mafitaAddress}" }
                 + p { + "${strings.corporateTaxNumber}: ${strings.mafitaTaxNumber}" }
                 + p { + "${strings.bankAccountNumberOfOrganization}: ${strings.bankAccountNumberOfMafita}" }
-            }
-            + column {
+            }, appStyles.let { listOf(it.fontSize1dot2vw, it.secondGridRow) })
+        ), PageElementData(
+            component = Pair(zke {
                 + zke {
-                    + image("/facebook.png", blobStyles.image)
+                    + image("/facebook.png", appStyles.socialMediaIcon)
                 }.on("click") { openURL(strings.mafitaFacebookUrl) }
                 + zke {
-                    + image("/instagram.png", blobStyles.image)
+                    + image("/instagram.png", appStyles.socialMediaIcon)
                 }.on("click") { openURL(strings.mafitaInstagramUrl) }
-            }
-            + column {
+            }, listOf(appStyles.socialMediaMainDiv))
+        ),
+        PageElementData(
+            component = Pair(zke {
                 + zke { + "${strings.phone}: ${strings.mafitaPhoneNumber}" }.on("click") {
                     openURL("tel:${strings.mafitaPhoneNumber}")
                 }
                 + zke { + "${strings.email}: ${strings.mafitaEmailAddress}" }.on("click") {
                     openURL("mailto:${strings.mafitaEmailAddress}")
                 }
+            }, appStyles.let { listOf(it.secondGridRow, it.paddingRight2vw, it.fontSize1dot2vw) })
+        )
+    ),
 
-            }
-        }
-    }
-}
+    appStyles.let { listOf(it.contactPage) }
+)

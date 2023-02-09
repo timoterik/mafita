@@ -5,32 +5,30 @@ package io.dcctech.mafita.frontend.browser.pages.landingPage
 
 
 import io.dcctech.mafita.data.ContributorBo
+import io.dcctech.mafita.frontend.browser.components.PageElementData
+import io.dcctech.mafita.frontend.browser.components.SinglePageElement
+import io.dcctech.mafita.frontend.browser.pages.landingPage.Contributors.createTable
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.ZkElement
-import zakadabar.core.browser.layout.ZkFullScreenLayout
-import zakadabar.core.browser.layout.zkScrollBarStyles
-import zakadabar.core.browser.page.ZkPage
-import zakadabar.core.browser.util.plusAssign
 import zakadabar.core.data.EntityId
-import zakadabar.lib.blobs.browser.blobStyles
 
-object Contributors : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar) {
 
-    override fun onCreate() {
+object Contributors : SinglePageElement(
+    listOf(
+        PageElementData(
+            title = Pair(strings.contributors, appStyles.let { listOf(it.fontSize2vw, it.contributorsTitle, it.paddingLeft2vw, it.paddingRight2vw) }),
+        ),
+        PageElementData(
+            component = Pair(createTable(), null)
+        )
+    ),
+    listOf(appStyles.pageElementStyle)
+) {
 
-        setAppTitle = false
-        + appStyles.homePageStyleOne
-
-        + row {
-            + h4 {
-                + strings.contributors
-            } //css appStyles.textLeft css appStyles.top5vw
-
-            + grid(appStyles.cards) {
-                testData.forEach { + ContributorCard(it) }
-            }
-        } css appStyles.donationPage
+    //https://jsfiddle.net/520Ltahd/
+    fun createTable() = zke(appStyles.cards) {
+        testData.forEach { + ContributorCard(it) }
     }
 
     class ContributorCard(
@@ -38,83 +36,91 @@ object Contributors : ZkPage(ZkFullScreenLayout, zkScrollBarStyles.hideScrollBar
     ) : ZkElement() {
 
         override fun onCreate() {
-            classList += appStyles.card
-            + div(appStyles.cardInner) {
-                + row {
-                    + column {
-                        + div(appStyles.cardTitle) { + image("/man.png", blobStyles.image) }
-                    }
-                    + column {
-                        + div(appStyles.cardTitle) {
-                            + bo.name
-                        }
-                        + div(appStyles.cardTitle) { + bo.position }
-                    }
+            + grid {
+                + column(appStyles.contributorImgDiv) {
+                    + image("/man.png", appStyles.contributorPicture)
                 }
-                + row {
-                    + p { + bo.introduction }
+                + column(appStyles.contributorTextDiv) {
+                    + row(appStyles.paddingLeft2vw) { + zke { + bo.name } css appStyles.fontSize2vw }
+                    + row(appStyles.paddingLeft2vw) { + zke { + bo.position } css appStyles.fontSize1dot5vw }
+                    + row(appStyles.paddingLeft2vw) { + p { + ! bo.introduction } css appStyles.fontSize1dot2vw }
                 }
-
             }
         }
     }
 }
 
-val testData = listOf<ContributorBo>(
+
+val testData = listOf(
     ContributorBo(
-        EntityId(0),
+        EntityId(1),
         "Rose Lyman",
         "",
         "CEO",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(2),
         "Sam McGrath",
         "",
         "Office clerks",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(3),
         "Ryan Jackson",
         "",
         "Administrative assistant",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(4),
         "Tracey Gray",
         "",
         "Accounting clerk",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(5),
         "Sally Vance",
         "",
         "Marketing manager",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(6),
         "Kylie Dickens",
         "",
         "Voluntary",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(7),
         "Hannah Hughes",
         "",
         "Voluntary",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     ),
     ContributorBo(
-        EntityId(0),
+        EntityId(8),
         "Leonard Howard",
         "",
         "Voluntary",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
+    ),
+    ContributorBo(
+        EntityId(9),
+        "Rose Lyman",
+        "",
+        "CEO",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
+    ),
+    ContributorBo(
+        EntityId(10),
+        "Sam McGrath",
+        "",
+        "Office clerks",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia dolor. Mauris eleifend ligula sed malesuada pharetra. Vestibulum blandit odio ante, a congue magna vehicula ac. Proin erat purus, volutpat ac velit et, placerat blandit."
     )
+
 )

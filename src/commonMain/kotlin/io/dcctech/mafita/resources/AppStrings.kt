@@ -118,7 +118,7 @@ class AppStrings : ZkBuiltinStrings() {
     val contact by "Contact"
     val fridayClubText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget."
     val cruSzegedText by "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare massa ut dolor molestie, et fringilla velit porttitor. Duis feugiat dignissim nisl. Aenean sit amet magna lacinia, bibendum ligula vitae, maximus erat. Proin nec mi a sapien semper consequat. Nunc vitae leo at justo euismod bibendum. In non nisi eros. Nam suscipit lectus nec nibh cursus fringilla. Nam dapibus rhoncus urna ut pulvinar. Integer eget nunc sit amet dolor consequat euismod. Vivamus vestibulum neque eget."
-    val mafitaFullName by "Mai Fiatalok Támogatásáért Közhasznú Egyesület\n\n(MAFITA Egyesület)"
+    val mafitaFullName by """Mai Fiatalok Támogatásáért Közhasznú Egyesület<br>(MAFITA Egyesület)"""
     val mafitaAddress by "6724 Szeged, Teréz utca 45/B"
     val organizationAddress by "Headquarters"
     val mafitaPhoneNumber by "+36308232856"
