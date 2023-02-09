@@ -3,6 +3,7 @@
  */
 package io.dcctech.mafita.frontend.browser.pages.landingPage
 
+import io.dcctech.mafita.frontend.browser.components.MafitaFooter
 import io.dcctech.mafita.frontend.browser.components.MafitaHeader
 import zakadabar.core.browser.layout.ZkFullScreenLayout
 import zakadabar.core.browser.layout.zkDefaultLayoutStyles
@@ -19,7 +20,7 @@ object Home : ZkPage(ZkFullScreenLayout, zkDefaultLayoutStyles.popupSideBarConta
         + CampNCommunityService
         + Donation
         + Contributors
-//        + MafitaFooter()
+        + MafitaFooter
 
     }
 }

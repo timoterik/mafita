@@ -325,6 +325,33 @@ class AppStyles : ZkCssStyleSheet() {
         gridRowEnd = 3
     }
 
+    val contactPage by cssClass {
+        backgroundColor = mafitaTheme.mafitaColor
+        + Display.grid
+        gap = 2.vw
+    }
+
+    val socialMediaMainDiv by cssClass {
+        gridRowStart = 2
+        gridRowEnd = 2
+        on(" div") {
+            + Display.flex
+            justifyContent = "space-around"
+        }
+    }
+
+    val firstGridRow by cssClass {
+        styles["grid-row"] = "1"
+    }
+
+    val secondGridRow by cssClass {
+        styles["grid-row"] = "2"
+    }
+
+    val socialMediaIcon by cssClass {
+        maxWidth = 40.percent
+    }
+
     val fivePanels by cssClass {
         display = "grid"
         width = 100.percent
