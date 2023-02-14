@@ -14,12 +14,12 @@ object ClubAndCru : SinglePageElement(
             image = Triple("/clubNCruBg.jpg", appStyles.clubAndCruImg, appStyles.clubAndCruImgDiv)
         ),
         PageElementData(
-            title = Pair(strings.fridayClub, appStyles.let { listOf(it.fontSize2vw, it.fridayClubTitle) }),
-            text = Pair(strings.fridayClubText, appStyles.let { listOf(it.fontSize1dot2vw, it.width30vw, it.fridayClubText) }),
+            title = Pair(strings.fridayClub, appStyles.let { listOf(it.fontSize2vw, it.paddingLeft2vw, it.fridayClubTitle) }),
+            text = Pair("${strings.fridayClubText} ${strings.mafitaAddress}", appStyles.let { listOf(it.paddingLeft2vw, it.fridayClubText) }),
         ),
         PageElementData(
-            title = Pair(strings.cruSzeged, appStyles.let { listOf(it.fontSize2vw, it.cruTitle) }),
-            text = Pair(strings.cruSzegedText, appStyles.let { listOf(it.fontSize1dot2vw, it.width30vw, it.cruText) }),
+            title = Pair(strings.cruSzeged, appStyles.let { listOf(it.fontSize2vw, it.cruTitle, it.paddingRight2vw) }),
+            text = Pair(strings.cruSzegedText, appStyles.let { listOf(it.paddingRight2vw, it.cruText) }),
         )
     ),
     appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }

@@ -14,7 +14,7 @@ import zakadabar.lib.blobs.browser.blobStyles
 object About : SinglePageElement(
     listOf(
         PageElementData(
-            title = Pair(strings.about, appStyles.let { listOf(it.fontSize2vw, it.aboutTitle, it.paddingLeft2vw, it.marginTop3vw) }),
+            title = Pair(strings.about, appStyles.let { listOf(it.fontSize2vw, it.aboutTitle, it.paddingLeft2vw) }),
             text = Pair(strings.aboutText, appStyles.let { listOf(it.fontSize1dot2vw, it.aboutText, it.paddingLeft2vw) }),
             image = Triple("/about_1.png", blobStyles.image, appStyles.aboutFirstImgDiv),
             image2 = Triple("/about_team.jpg", appStyles.aboutSecondImg, appStyles.aboutSecondImgDiv),

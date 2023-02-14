@@ -15,7 +15,6 @@ object CampNCommunityService : SinglePageElement(
         PageElementData(
             title = Pair(strings.camp, appStyles.let { listOf(it.fontSize2vw, it.campTitle, it.paddingLeft2vw) }),
             text = Pair(strings.campText, appStyles.let { listOf(it.fontSize1dot2vw, it.campText, it.paddingLeft2vw) }),
-//            image = Triple("/about_1.png", blobStyles.image, appStyles.aboutFirstImg),
             image = Triple("/camp.png", blobStyles.image, appStyles.campCommunityServiceImg),
         ),
         PageElementData(

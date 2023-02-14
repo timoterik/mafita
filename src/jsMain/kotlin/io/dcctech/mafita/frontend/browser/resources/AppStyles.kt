@@ -150,6 +150,7 @@ class AppStyles : ZkCssStyleSheet() {
         gridColumnEnd = 9
         gridRowStart = 1
         gridRowEnd = 1
+        + AlignSelf.end
     }
 
     val aboutText by cssClass {
@@ -174,35 +175,35 @@ class AppStyles : ZkCssStyleSheet() {
 
     val cruTitle by cssClass {
         gridColumnStart = 4
-        gridColumnEnd = 4
-        gridRowStart = 3
-        gridRowEnd = 3
+        gridColumnEnd = 6
+        gridRowStart = 2
+        gridRowEnd = 2
         + AlignSelf.end
         + TextAlign.right
     }
 
     val cruText by cssClass {
-        gridColumnStart = 3
-        gridColumnEnd = 5
-        gridRowStart = 4
+        gridColumnStart = 4
+        gridColumnEnd = 6
+        gridRowStart = 3
         gridRowEnd = 6
         + TextAlign.right
 
     }
 
     val fridayClubTitle by cssClass {
-        gridColumnStart = 2
-        gridColumnEnd = 2
+        gridColumnStart = 1
+        gridColumnEnd = 3
         gridRowStart = 1
         gridRowEnd = 1
         + AlignSelf.end
     }
 
     val fridayClubText by cssClass {
-        gridColumnStart = 2
+        gridColumnStart = 1
         gridColumnEnd = 3
         gridRowStart = 2
-        gridRowEnd = 4
+        gridRowEnd = 6
     }
 
     val campTitle by cssClass {
@@ -222,7 +223,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val communityServiceTitle by cssClass {
         gridColumnStart = 4
-        gridColumnEnd = 5
+        gridColumnEnd = 6
         gridRowStart = 3
         gridRowEnd = 3
         + TextAlign.right
@@ -230,7 +231,7 @@ class AppStyles : ZkCssStyleSheet() {
 
     val communityServiceText by cssClass {
         gridColumnStart = 4
-        gridColumnEnd = 5
+        gridColumnEnd = 6
         gridRowStart = 4
         gridRowEnd = 6
         + TextAlign.right
