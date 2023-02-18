@@ -8,7 +8,6 @@ import zakadabar.core.resource.css.ZkCssStyleRule
 
 
 data class PageElementData(
-
     var title: Pair<String, List<ZkCssStyleRule>?>? = null,
     var text: Pair<String, List<ZkCssStyleRule>?>? = null,
     var image: Triple<String, ZkCssStyleRule?, ZkCssStyleRule?>? = null,

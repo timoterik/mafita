@@ -7,16 +7,11 @@ import io.dcctech.mafita.frontend.browser.components.PageElementData
 import io.dcctech.mafita.frontend.browser.components.SinglePageElement
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
-import zakadabar.lib.blobs.browser.blobStyles
 
 
-object CampNCommunityService : SinglePageElement(
+class CommunityService : SinglePageElement(
+    url = strings.communityServiceUrl,
     listOf(
-        PageElementData(
-            title = Pair(strings.camp, appStyles.let { listOf(it.fontSize2vw, it.campTitle, it.paddingLeft2vw) }),
-            text = Pair(strings.campText, appStyles.let { listOf(it.fontSize1dot2vw, it.campText, it.paddingLeft2vw) }),
-            image = Triple("/camp.png", blobStyles.image, appStyles.campCommunityServiceImg),
-        ),
         PageElementData(
             title = Pair(strings.communityService, appStyles.let { listOf(it.fontSize2vw, it.communityServiceTitle, it.paddingRight2vw) }),
             text = Pair(strings.communityServiceText, appStyles.let { listOf(it.fontSize1dot2vw, it.communityServiceText, it.paddingRight2vw) }),

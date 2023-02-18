@@ -10,4 +10,3 @@ import zakadabar.core.resource.ZkFlavour
 fun btnWithoutBg(text: String, onClick: () -> Unit) = ZkButton(text, flavour = ZkFlavour.Custom, onClick = onClick, fill = false, border = false, capitalize = false)
 
 fun openURL(url: String, target: String = "_blank") = window.open(url, target)
-

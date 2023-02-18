@@ -5,16 +5,17 @@ package io.dcctech.mafita.frontend.browser.pages.landingPage
 
 
 import io.dcctech.mafita.data.ContributorBo
+import io.dcctech.mafita.frontend.browser.DefaultLayout.zke
 import io.dcctech.mafita.frontend.browser.components.PageElementData
 import io.dcctech.mafita.frontend.browser.components.SinglePageElement
-import io.dcctech.mafita.frontend.browser.pages.landingPage.Contributors.createTable
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.ZkElement
 import zakadabar.core.data.EntityId
 
 
-object Contributors : SinglePageElement(
+class Contributors : SinglePageElement(
+    url = strings.contributorsUrl,
     listOf(
         PageElementData(
             title = Pair(strings.contributors, appStyles.let { listOf(it.fontSize2vw, it.contributorsTitle, it.paddingLeft2vw, it.paddingRight2vw) }),
@@ -24,32 +25,30 @@ object Contributors : SinglePageElement(
         )
     ),
     listOf(appStyles.pageElementStyle)
-) {
+)
 
-    //https://jsfiddle.net/520Ltahd/
-    fun createTable() = zke(appStyles.cards) {
-        testData.forEach { + ContributorCard(it) }
-    }
+//https://jsfiddle.net/520Ltahd/
+fun createTable() = zke(appStyles.cards) {
+    testData.forEach { + ContributorCard(it) }
+}
 
-    class ContributorCard(
-        var bo: ContributorBo
-    ) : ZkElement() {
+class ContributorCard(
+    var bo: ContributorBo
+) : ZkElement() {
 
-        override fun onCreate() {
-            + grid {
-                + column(appStyles.contributorImgDiv) {
-                    + image("/man.png", appStyles.contributorPicture)
-                }
-                + column(appStyles.contributorTextDiv) {
-                    + row(appStyles.paddingLeft2vw) { + zke { + bo.name } css appStyles.fontSize2vw }
-                    + row(appStyles.paddingLeft2vw) { + zke { + bo.position } css appStyles.fontSize1dot5vw }
-                    + row(appStyles.paddingLeft2vw) { + p { + ! bo.introduction } css appStyles.fontSize1dot2vw }
-                }
+    override fun onCreate() {
+        + grid {
+            + column(appStyles.contributorImgDiv) {
+                + image("/man.png", appStyles.contributorPicture)
+            }
+            + column(appStyles.contributorTextDiv) {
+                + row(appStyles.paddingLeft2vw) { + zke { + bo.name } css appStyles.fontSize2vw }
+                + row(appStyles.paddingLeft2vw) { + zke { + bo.position } css appStyles.fontSize1dot5vw }
+                + row(appStyles.paddingLeft2vw) { + p { + ! bo.introduction } css appStyles.fontSize1dot2vw }
             }
         }
     }
 }
-
 
 val testData = listOf(
     ContributorBo(

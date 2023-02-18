@@ -10,7 +10,8 @@ import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 
 
-object Welcome : SinglePageElement(
+class Welcome : SinglePageElement(
+    url = strings.applicationName.lowercase(),
     listOf(
         PageElementData(
             title = Pair(strings.slogan, appStyles.let { listOf(it.fontSize2vw, it.mafitaColor, it.welcomePageSlogan) }),

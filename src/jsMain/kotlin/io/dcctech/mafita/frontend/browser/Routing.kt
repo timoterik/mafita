@@ -7,12 +7,11 @@ import io.dcctech.mafita.frontend.browser.pages.Dashboard
 import io.dcctech.mafita.frontend.browser.pages.DocumentCrud
 import io.dcctech.mafita.frontend.browser.pages.MailCrud
 import io.dcctech.mafita.frontend.browser.pages.OAuthLogin
-import io.dcctech.mafita.frontend.browser.pages.landingPage.Contributors
-import io.dcctech.mafita.frontend.browser.pages.landingPage.Donation
 import io.dcctech.mafita.frontend.browser.pages.landingPage.Home
 import zakadabar.core.browser.application.ZkAppRouting
+import zakadabar.core.browser.layout.ZkFullScreenLayout
 
-class Routing : ZkAppRouting(DefaultLayout, Home) {
+class Routing : ZkAppRouting(ZkFullScreenLayout, Home) {
 
     init {
         zakadabar.lib.accounts.browser.install(this)
@@ -20,15 +19,8 @@ class Routing : ZkAppRouting(DefaultLayout, Home) {
         + Home
         + DocumentCrud()
         + MailCrud()
-//        + Welcome
-//        + About
         + Dashboard
         + OAuthLogin()
-//        + ClubAndCru
-//        + CampNCommunityService
-        + Donation
-        + Contributors
-
     }
 
 }

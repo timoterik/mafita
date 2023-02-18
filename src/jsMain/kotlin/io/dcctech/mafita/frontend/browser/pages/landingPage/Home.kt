@@ -3,24 +3,23 @@
  */
 package io.dcctech.mafita.frontend.browser.pages.landingPage
 
-import io.dcctech.mafita.frontend.browser.components.MafitaFooter
-import io.dcctech.mafita.frontend.browser.components.MafitaHeader
-import zakadabar.core.browser.layout.ZkFullScreenLayout
-import zakadabar.core.browser.layout.zkDefaultLayoutStyles
+import io.dcctech.mafita.frontend.browser.components.SinglePageLayout
+import io.dcctech.mafita.frontend.browser.resources.singlePageLayoutStyles
 import zakadabar.core.browser.page.ZkPage
 
-object Home : ZkPage(ZkFullScreenLayout, zkDefaultLayoutStyles.popupSideBarContainer) {
-
+object Home : ZkPage(SinglePageLayout, singlePageLayoutStyles.wrapper) {
     override fun onCreate() {
         super.onCreate()
-        + MafitaHeader()
-        + Welcome
-        + About
-        + ClubAndCru
-        + CampNCommunityService
-        + Donation
-        + Contributors
-        + MafitaFooter
+
+        + Welcome()
+        + About()
+        + Club()
+        + Cru()
+        + Camp()
+        + CommunityService()
+        + Donation()
+        + Contributors()
+        + Footer()
 
     }
 }

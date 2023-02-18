@@ -419,14 +419,71 @@ class AppStyles : ZkCssStyleSheet() {
         paddingRight = 2.vw
     }
 
-    val marginTop3vw by cssClass {
-        marginTop = 3.vw
-    }
-
-//  TODO would look more natural this way
+//
+//    open val wave by cssClass {
+//        + Position.relative
+//        height = 70.px
+//        width + 600.px
+//        background = "#e0efe3"
+//    }
+//
+//    val waveBefore by cssRule(".$wave::before !important") {
+//        content = ""
+//        + Display.block
+//        + Position.absolute
+//        borderRadius = "100% 50%"
+//        width = 100.percent
+//        height = 300.px
+//        backgroundColor = ZkColors.Yellow.a400
+//        right = (- 25).px
+//        top = 40.px
+//    }
+//    val waveAfter by cssRule(".$wave::after") {
+//        content = ""
+//        + Display.block
+//        + Position.absolute
+//        borderRadius = "100% 50%"
+//        width = 100.percent
+//        height = 300.px
+//        backgroundColor = "#e0efe3"
+//        left = 0.px
+//        top = 27.px
+//    }
+//
+//    //  TODO would look more natural this way
+//    val waveContainer by cssClass {
+//        + Display.block
+//        + Position.relative
+//        height = 40.px
+//        background = ZkColors.black
+//        on(":before") {
+//            content = ""
+//            + Display.block
+//            + Position.absolute
+//            borderRadius = "100%"
+//            width = 100.percent
+//            height = 340.px
+//            backgroundColor = ZkColors.white
+//            right = (- 25).percent
+//            top = 20.px
+//        }
+//        on(" :after") {
+//            content = ""
+//            + Display.block
+//            + Position.absolute
+//            borderRadius = "100%"
+//            width = 100.percent
+//            height = 300.px
+//            backgroundColor = ZkColors.black
+//            left = (- 25).percent
+//            top = (- 240).px
+//
+//        }
+//
+//    }
 
 //    val wave by cssClass {
-//     + Position.relative
+//        + Position.relative
 //        height = 70.px
 //        width + 600.px
 //        background = "#e0efe3"
@@ -434,7 +491,7 @@ class AppStyles : ZkCssStyleSheet() {
 //            content = ""
 //            + Display.block
 //            + Position.absolute
-//            borderRadius = "100% 50.percent
+//            borderRadius = "100% 50%"
 //            width = 340.px
 //            height = 80.px
 //            backgroundColor = ZkColors.white
@@ -446,7 +503,7 @@ class AppStyles : ZkCssStyleSheet() {
 //            content = ""
 //            + Display.block
 //            + Position.absolute
-//            borderRadius = "100% 50.percent
+//            borderRadius = "100% 50%"
 //            width = 300.px
 //            height = 70.px
 //            backgroundColor = "#e0efe3"

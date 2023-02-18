@@ -1,14 +1,18 @@
 /*
  * Copyright © 2022-2023, DCCTech, Hungary and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
-package io.dcctech.mafita.frontend.browser.components
+package io.dcctech.mafita.frontend.browser.pages.landingPage
 
 import io.dcctech.mafita.frontend.browser.DefaultLayout.zke
+import io.dcctech.mafita.frontend.browser.components.PageElementData
+import io.dcctech.mafita.frontend.browser.components.SinglePageElement
+import io.dcctech.mafita.frontend.browser.components.openURL
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 
 
-object MafitaFooter : SinglePageElement(
+class Footer : SinglePageElement(
+    url = strings.contactUrl,
     listOf(
         PageElementData(
             title = Pair(strings.contact, appStyles.let { listOf(it.fontSize2vw, it.paddingLeft2vw, it.firstGridRow) }),
@@ -41,6 +45,5 @@ object MafitaFooter : SinglePageElement(
             }, appStyles.let { listOf(it.secondGridRow, it.paddingRight2vw, it.fontSize1dot2vw) })
         )
     ),
-
     appStyles.let { listOf(it.contactPage) }
 )

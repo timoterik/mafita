@@ -11,7 +11,8 @@ import io.dcctech.mafita.resources.strings
 import zakadabar.lib.blobs.browser.blobStyles
 
 
-object About : SinglePageElement(
+class About : SinglePageElement(
+    url = strings.aboutUrl,
     listOf(
         PageElementData(
             title = Pair(strings.about, appStyles.let { listOf(it.fontSize2vw, it.aboutTitle, it.paddingLeft2vw) }),

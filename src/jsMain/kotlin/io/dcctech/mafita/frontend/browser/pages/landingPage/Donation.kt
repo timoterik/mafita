@@ -13,7 +13,8 @@ import zakadabar.core.browser.toast.toastSuccess
 import zakadabar.core.resource.ZkFlavour
 import zakadabar.lib.blobs.browser.blobStyles
 
-object Donation : SinglePageElement(
+class Donation : SinglePageElement(
+    url = strings.donationUrl,
     listOf(
         PageElementData(
             image = Triple("/clubNCruBg.jpg", blobStyles.image, appStyles.donationImgDiv)
@@ -28,4 +29,5 @@ object Donation : SinglePageElement(
         )
     ),
     appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }
+
 )

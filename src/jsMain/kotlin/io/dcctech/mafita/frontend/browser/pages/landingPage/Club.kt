@@ -8,7 +8,8 @@ import io.dcctech.mafita.frontend.browser.components.SinglePageElement
 import io.dcctech.mafita.frontend.browser.resources.appStyles
 import io.dcctech.mafita.resources.strings
 
-object ClubAndCru : SinglePageElement(
+class Club : SinglePageElement(
+    url = strings.fridayClubUrl,
     listOf(
         PageElementData(
             image = Triple("/clubNCruBg.jpg", appStyles.clubAndCruImg, appStyles.clubAndCruImgDiv)
@@ -17,10 +18,6 @@ object ClubAndCru : SinglePageElement(
             title = Pair(strings.fridayClub, appStyles.let { listOf(it.fontSize2vw, it.paddingLeft2vw, it.fridayClubTitle) }),
             text = Pair("${strings.fridayClubText} ${strings.mafitaAddress}", appStyles.let { listOf(it.paddingLeft2vw, it.fridayClubText) }),
         ),
-        PageElementData(
-            title = Pair(strings.cruSzeged, appStyles.let { listOf(it.fontSize2vw, it.cruTitle, it.paddingRight2vw) }),
-            text = Pair(strings.cruSzegedText, appStyles.let { listOf(it.paddingRight2vw, it.cruText) }),
-        )
     ),
     appStyles.let { listOf(it.pageElementStyle, it.homePageStyleTwo) }
 )

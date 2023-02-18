@@ -31,6 +31,7 @@ class AppStrings : ZkBuiltinStrings() {
     val document by "Document"
     val slogan by "Experiences of a lifetime"
     val about by "About"
+    val aboutUrl by "about"
     val aboutText by """
         After four years of voluntary activity, the decision was made <br>
         in 2007 to establish the Mai Fiatalok Támogatásáért<br>
@@ -52,8 +53,11 @@ class AppStrings : ZkBuiltinStrings() {
         <br>
     """.trimIndent()
     val fridayClub by "Friday club"
+    val fridayClubUrl by "friday-club"
     val cruSzeged by "Cru Szeged"
+    val cruSzegedUrl by "cru-szeged"
     val camp by "Camp"
+    val campUrl by "camp"
     val campText by """
         The approach of summer always causes exciting activity in the life<br>
         of our association, as we start organizing our summer camp with<br>
@@ -79,6 +83,7 @@ class AppStrings : ZkBuiltinStrings() {
        the ages of 8 and 18 by filling out the form below!
     """.trimIndent()
     val communityService by "Community service"
+    val communityServiceUrl by "community-service"
     val communityServiceText by """
         Starting in 2016, the prerequisite for applying for the<br>
         baccalaureate exam is that all students perform 50 hours<br>
@@ -115,6 +120,7 @@ class AppStrings : ZkBuiltinStrings() {
         For more information, contact me at mafita@mafita.hu or by phone.
     """.trimIndent()
     val donation by "Donation"
+    val donationUrl by "donation"
     val donationOnePercent by "1% financial support"
     val donationText1 by """
         Dear Supporter!<br>
@@ -162,7 +168,9 @@ class AppStrings : ZkBuiltinStrings() {
         Thank you in advance for your help!
     """.trimIndent()
     val contributors by "Contributors"
+    val contributorsUrl by "contributors"
     val contact by "Contact"
+    val contactUrl by "contact"
     val fridayClubText by """
         During the school's Cru classes, the need for both the organizers<br>
         and the young people to have an accepting, safe space where they<br>
