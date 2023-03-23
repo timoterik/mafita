@@ -23,7 +23,6 @@ open class SinglePageElement(
         elements.forEach { e ->
 
             on(window, application.navStateChangeEvent) { event ->
-                console.log(window.location.hash, element.id)
                 if (window.location.hash == element.id) {
                     element.scrollIntoView()
                 }

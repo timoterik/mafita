@@ -6,7 +6,6 @@ package io.dcctech.mafita.frontend.browser.components
 import io.dcctech.mafita.resources.strings
 import zakadabar.core.browser.sidebar.ZkSideBar
 import zakadabar.core.browser.toast.toastSuccess
-import zakadabar.lib.accounts.browser.login.Login
 
 class MafitaSideBar : ZkSideBar() {
 
@@ -22,6 +21,5 @@ class MafitaSideBar : ZkSideBar() {
         + item(strings.contributors) { toastSuccess { "Click on ${strings.contributors}" } }
         + item(strings.documents) { toastSuccess { "Click on ${strings.documents}" } }
         + item(strings.contact) { toastSuccess { "Click on ${strings.contact}" } }
-        + item<Login>()
     }
 }

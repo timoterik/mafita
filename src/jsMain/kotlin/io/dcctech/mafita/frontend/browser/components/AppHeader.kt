@@ -5,13 +5,8 @@ package io.dcctech.mafita.frontend.browser.components
 
 import io.dcctech.mafita.frontend.browser.resources.AppDarkTheme
 import io.dcctech.mafita.frontend.browser.resources.AppLightTheme
-import zakadabar.core.browser.application.application
 import zakadabar.core.browser.theme.ZkThemeRotate
-import zakadabar.core.browser.util.marginRight
 import zakadabar.core.resource.ZkIcons
-import zakadabar.core.resource.css.AlignSelf
-import zakadabar.core.resource.css.Display
-import zakadabar.core.resource.css.px
 import zakadabar.softui.browser.titlebar.SuiAppHeader
 
 class AppHeader(
@@ -20,16 +15,6 @@ class AppHeader(
 
     override fun onCreate() {
         super.onCreate()
-
-        titleContainer += zke {
-            + Display.flex
-            + AlignSelf.center
-
-            element.style.fontSize = 14.px
-
-            + div { + application.serverDescription.name } marginRight 20.px
-            + application.serverDescription.version
-        }
 
         globalElements += ZkThemeRotate(
             ZkIcons.darkMode to AppDarkTheme(),

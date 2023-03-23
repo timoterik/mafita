@@ -4,14 +4,14 @@
 package io.dcctech.mafita.frontend.browser.components
 
 import io.dcctech.mafita.frontend.browser.resources.singlePageLayoutStyles
-import zakadabar.core.browser.ZkElement
 import zakadabar.core.browser.application.ZkAppLayout
 import zakadabar.core.browser.layout.zkLayoutStyles
 import zakadabar.core.browser.util.minusAssign
 
 object SinglePageLayout : ZkAppLayout("single-page") {
 
-    open val navigationElements: List<ZkElement> = Header.elements
+    open val header: Header = Header()
+
     override fun onCreate() {
         super.onCreate()
         element.classList -= zkLayoutStyles.layout
@@ -20,12 +20,7 @@ object SinglePageLayout : ZkAppLayout("single-page") {
 
         + zke {
             element.id = "single-page-nav"
-            + zke {
-                navigationElements.forEach { element ->
-                    + element
-                }
-
-            } css singlePageLayoutStyles.container
+            + header
         } css singlePageLayoutStyles.header
 
 

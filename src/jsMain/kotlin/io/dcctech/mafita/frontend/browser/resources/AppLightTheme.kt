@@ -3,13 +3,11 @@
  */
 package io.dcctech.mafita.frontend.browser.resources
 
-import zakadabar.core.browser.button.zkButtonStyles
-import zakadabar.core.browser.layout.zkScrollBarStyles
 import zakadabar.core.browser.sidebar.zkSideBarStyles
 import zakadabar.core.browser.titlebar.zkTitleBarStyles
 import zakadabar.core.resource.ZkColors
-import zakadabar.core.util.alpha
 import zakadabar.softui.browser.theme.SuiLightTheme
+import zakadabar.softui.browser.theme.styles.suiLayoutStyles
 
 
 class AppLightTheme : SuiLightTheme(), MafitaTheme {
@@ -19,6 +17,7 @@ class AppLightTheme : SuiLightTheme(), MafitaTheme {
     }
 
     override val name = NAME
+
 
     // -------------------------------------------------------------------------
     // Customize theme variables
@@ -32,37 +31,34 @@ class AppLightTheme : SuiLightTheme(), MafitaTheme {
     override var homepageBgColorTwo = ZkColors.black
     override var homepageTextColorOne = ZkColors.black
     override var homepageTextColorTwo = ZkColors.white
-
     override var backgroundColor: String = ZkColors.white
+
+
+    override var infoPair: String = mafitaColor
     override fun onResume() {
         super<SuiLightTheme>.onResume()
 
-        with(zkScrollBarStyles) {
-            thumbColor = textColor.alpha(0.5)
-            trackColor = backgroundColor
-        }
-
         with(zkSideBarStyles) {
-            backgroundColor = primaryColor
-            hoverTextColor = ZkColors.white
-            textColor = primaryColor
-            fontSize = "90%"
-            sectionBackgroundColor = ZkColors.white.alpha(0.1)
-            sectionBorderColor = ZkColors.white.alpha(0.5)
-            sectionTextColor = ZkColors.white
+            textColor = mafitaColor
+            backgroundColor = ZkColors.white
         }
 
         with(zkTitleBarStyles) {
-            appTitleBarText = mafitaTheme.mafitaColor
-            appHandleBackground = blockBackgroundColor
-            appHandleText = textColor
-            appHandleBorder = "1px solid ${mafitaTheme.mafitaColor}"
-            appTitleBarBackground = blockBackgroundColor
-            appTitleBarBorder = appHandleBorder
+            appTitleBarText = mafitaColor
         }
 
-        with(zkButtonStyles) {
-            primaryColor = mafitaColor
+
+        with(suiLayoutStyles) {
+//            headerBackground = ZkColors.white
+//            with(sideBarContainer){
+//                height = 100.px
+//                width = 100.percent
+//            }
+        }
+
+
+        with(singlePageLayoutStyles) {
+            headerColor = backgroundColor
         }
     }
 }

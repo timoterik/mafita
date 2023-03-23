@@ -20,6 +20,15 @@ class AppStyles : ZkCssStyleSheet() {
         padding = 20.px
     }
 
+    val landing by cssClass {
+        + Display.grid
+        gridTemplateRows = "max-content 1fr max-content"
+        width = 100.percent
+        height = 100.percent
+        backgroundColor = theme.backgroundColor
+        padding = 0.px + "!important"
+    }
+
     val gridCol2 by cssClass {
         + Position.relative
         + BoxSizing.borderBox

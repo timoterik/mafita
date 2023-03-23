@@ -60,5 +60,9 @@ class AppDarkTheme : SuiDarkTheme(), MafitaTheme {
             primaryColor = mafitaColor
         }
 
+        with(singlePageLayoutStyles) {
+            headerColor = backgroundColor
+        }
+
     }
 }

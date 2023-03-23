@@ -3,13 +3,15 @@
  */
 package io.dcctech.mafita.frontend.browser.pages.landingPage
 
-import io.dcctech.mafita.frontend.browser.components.SinglePageLayout
-import io.dcctech.mafita.frontend.browser.resources.singlePageLayoutStyles
+import io.dcctech.mafita.frontend.browser.DefaultLayout
+import io.dcctech.mafita.frontend.browser.resources.appStyles
 import zakadabar.core.browser.page.ZkPage
+import zakadabar.core.browser.util.plusAssign
 
-object Home : ZkPage(SinglePageLayout, singlePageLayoutStyles.wrapper) {
+object Home : ZkPage(DefaultLayout) {
     override fun onCreate() {
         super.onCreate()
+        classList += appStyles.landing
 
         + Welcome()
         + About()
