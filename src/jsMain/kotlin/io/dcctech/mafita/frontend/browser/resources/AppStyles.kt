@@ -437,10 +437,10 @@ class AppStyles : ZkCssStyleSheet() {
 //    }
 
     val smallHader by cssClass {
-        width = 20.vw
+        width = 25.vw
         + Display.flex
         + FlexDirection.column
-        + JustifyContent.center
+        + AlignItems.center
         backgroundColor = ZkColors.white
     }
 

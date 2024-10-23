@@ -36,17 +36,19 @@ class MafitaHeader : ZkElement() {
 //        + btnWithoutBg(strings.communityService) { toastSuccess { "Click on ${strings.communityService}" } },
 
         + btnWithoutBg(application.serverDescription.name) { toastSuccess { "Click on ${application.serverDescription.name}" } } css appStyles.headerItem
-        + btnWithoutBg(strings.camp) { toastSuccess { "Click on ${strings.camp}" } } css appStyles.headerItem
+        + btnWithoutBg(strings.fridayClub + " / " +strings.camp) { toastSuccess { "Click on ${strings.camp}" } } css appStyles.headerItem
         + btnWithoutBg(strings.donation) { toastSuccess { "Click on ${strings.donation}" } } css appStyles.headerItem
         + btnWithoutBg(strings.contributors) { toastSuccess { "Click on ${strings.contributors}" } } css appStyles.headerItem
         + btnWithoutBg(strings.contact) { toastSuccess { "Click on ${strings.contact}" } } css appStyles.headerItem
-        + zke {
+        + span {
             + ZkThemeRotate(
                 ZkIcons.darkMode to AppDarkTheme(),
                 ZkIcons.lightMode to AppLightTheme()
             )
         } css appStyles.headerItem
-        + ZkButton(loginIcon, fill = false, iconSize = 17, flavour = ZkFlavour.Primary, border = false) { OAuthLogin().open() } css appStyles.headerItem
+        + zke {
+            + ZkButton(loginIcon, fill = false, iconSize = 100, flavour = ZkFlavour.Primary, border = false) { OAuthLogin().open() }
+        } css appStyles.headerItem
     }
 
     override fun onCreate() {
