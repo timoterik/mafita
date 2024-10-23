@@ -3,8 +3,8 @@ defaultLocale: en
 
 database:
   driverClassName: org.postgresql.Driver
-  jdbcUrl: jdbc:postgresql://localhost:5432/Mafita
-  username: ted
+  jdbcUrl: jdbc:postgresql://localhost:5432/mafita
+  username: tedy
   password: Almafa.12
   debugSql: false
 

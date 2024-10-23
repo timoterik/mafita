@@ -27,7 +27,7 @@ version = "2023.1.10"
 
 val isSnapshot = version.toString().contains("SNAPSHOT")
 
-val stackVersion by extra { "2023.1.9" }
+val stackVersion by extra { "2023.4.20" }
 val datetimeVersion = "0.2.1"
 
 // in TeamCity we can use the build number to find the generated docker image

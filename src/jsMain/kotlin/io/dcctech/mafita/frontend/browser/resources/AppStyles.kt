@@ -3,7 +3,9 @@
  */
 package io.dcctech.mafita.frontend.browser.resources
 
+import io.dcctech.mafita.frontend.browser.DefaultLayout.unaryPlus
 import zakadabar.core.browser.layout.zkScrollBarStyles
+import zakadabar.core.resource.ZkColors
 import zakadabar.core.resource.css.*
 
 val appStyles by cssStyleSheet(AppStyles())
@@ -18,27 +20,6 @@ class AppStyles : ZkCssStyleSheet() {
     val home by cssClass {
         overflowY = "scroll"
         padding = 20.px
-    }
-
-    val gridCol2 by cssClass {
-        + Position.relative
-        + BoxSizing.borderBox
-        + Display.grid
-        gridTemplateColumns = "max-content max-content"
-        gridGap = theme.spacingStep.px
-        padding = theme.spacingStep.px
-    }
-
-    val nav by cssClass {
-        + Display.grid
-        gridTemplateColumns = "repeat(12, 1fr)"
-        gridAutoRows = 9.vw
-        + JustifyContent.center
-        + Position.fixed
-        top = "0"
-        width = 100.percent
-        backgroundImage = "url(/wave_${mafitaTheme.mafitaLogoSVGColor}.svg)"
-        color = mafitaTheme.mafitaColor
     }
 
     val mafitaColor by cssClass {
@@ -454,4 +435,29 @@ class AppStyles : ZkCssStyleSheet() {
 //
 //        }
 //    }
+
+    val smallHader by cssClass {
+        width = 20.vw
+        + Display.flex
+        + FlexDirection.column
+        + JustifyContent.center
+        backgroundColor = ZkColors.white
+    }
+
+    val header by cssClass {
+        + Display.flex
+        + FlexDirection.row
+        + JustifyContent.spaceEvenly
+    }
+
+    val headerItem by cssClass {
+        color = mafitaTheme.mafitaColor
+        fontSize = 30.px
+        fontWeight = "500"
+        large {
+            fontSize = 18.px
+        }
+
+    }
+
 }
